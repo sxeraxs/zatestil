@@ -1,2 +1,0 @@
-/usr/bin/ar qc libsfed.a CMakeFiles/sfe.dir/sfe/src/sfe/sfe_preload.cpp.o
-/usr/bin/ranlib libsfed.a

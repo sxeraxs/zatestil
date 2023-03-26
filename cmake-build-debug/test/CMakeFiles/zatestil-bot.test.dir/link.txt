@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -D_DEBUG -g -O0 "CMakeFiles/zatestil-bot.test.dir/sample.cpp.o" -o zatestil-bot.test  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libgtest_maind.a /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libgtestd.a -lpthread 
