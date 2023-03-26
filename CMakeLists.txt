@@ -31,14 +31,19 @@ set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} ${NDEBUG_F
 
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0")
 
+set(BOOST_COMPONENTS)
+list(APPEND BOOST_COMPONENTS system program_options thread context coroutine)
+
 add_subdirectory(third)
 find_package(Threads REQUIRED)
 find_package(GTest CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
+
 find_package(Boost REQUIRED CONFIG COMPONENTS ${BOOST_COMPONENTS})
 
 include_directories(include)
 include_directories(${Boost_INCLUDE_DIRS})
+include_directories(third/sfe/sfe/include)
 include_directories(third/tgbot/tgbot-cpp/include)
 
 add_subdirectory(source)

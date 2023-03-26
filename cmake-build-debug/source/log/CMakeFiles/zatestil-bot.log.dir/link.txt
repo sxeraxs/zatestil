@@ -1,2 +1,0 @@
-/usr/bin/ar qc libzatestil-bot.log.a "CMakeFiles/zatestil-bot.log.dir/log.cpp.o"
-/usr/bin/ranlib libzatestil-bot.log.a

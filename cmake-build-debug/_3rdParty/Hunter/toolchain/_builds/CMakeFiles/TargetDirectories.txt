@@ -1,2 +1,0 @@
-/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles/edit_cache.dir
-/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles/rebuild_cache.dir
