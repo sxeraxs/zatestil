@@ -1,12 +1,12 @@
 source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: \
  /home/aalisher/CLionProjects/zatestil-bot/source/log/log.cpp \
  /usr/include/stdc-predef.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/async.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/async_logger.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/logger.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/common.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/tweakme.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/null_mutex.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/async.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/async_logger.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/logger.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/common.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/tweakme.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/null_mutex.h \
  /usr/include/c++/10/atomic /usr/include/c++/10/bits/atomic_base.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h \
@@ -188,11 +188,11 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: \
  /usr/include/c++/10/bits/stl_vector.h \
  /usr/include/c++/10/bits/stl_bvector.h \
  /usr/include/c++/10/bits/vector.tcc \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/fmt/fmt.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/fmt/core.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/fmt/fmt.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/fmt/core.h \
  /usr/include/c++/10/cstddef /usr/include/c++/10/cstring \
  /usr/include/string.h /usr/include/strings.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/fmt/format.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/fmt/format.h \
  /usr/include/c++/10/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -215,26 +215,26 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: \
  /usr/include/c++/10/tr1/poly_hermite.tcc \
  /usr/include/c++/10/tr1/poly_laguerre.tcc \
  /usr/include/c++/10/tr1/riemann_zeta.tcc \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/fmt/core.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/log_msg.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/backtracer.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/log_msg_buffer.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/circular_q.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/fmt/core.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/log_msg.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/backtracer.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/log_msg_buffer.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/circular_q.h \
  /usr/include/c++/10/cassert /usr/include/assert.h \
  /usr/include/c++/10/mutex /usr/include/c++/10/bits/std_mutex.h \
  /usr/include/c++/10/bits/unique_lock.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/registry.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/thread_pool.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/mpmc_blocking_q.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/registry.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/thread_pool.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/mpmc_blocking_q.h \
  /usr/include/c++/10/condition_variable /usr/include/c++/10/stop_token \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/os.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/os.h \
  /usr/include/c++/10/thread \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/sinks/stdout_color_sinks.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/sinks/ansicolor_sink.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/console_globals.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/sinks/sink.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/formatter.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/synchronous_factory.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/sinks/stdout_color_sinks.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/sinks/ansicolor_sink.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/console_globals.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/sinks/sink.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/formatter.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/synchronous_factory.h \
  /home/aalisher/CLionProjects/zatestil-bot/include/log/log.hpp \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/spdlog.h \
- /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/version.h
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/spdlog.h \
+ /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/version.h

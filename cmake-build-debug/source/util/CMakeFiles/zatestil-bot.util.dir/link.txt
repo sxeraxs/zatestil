@@ -1,2 +1,2 @@
-/usr/bin/ar qc libzatestil-bot.util.a "CMakeFiles/zatestil-bot.util.dir/OnScopeExit.cpp.o" "CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.o"
+/usr/bin/ar qc libzatestil-bot.util.a "CMakeFiles/zatestil-bot.util.dir/OnScopeExit.cpp.o" "CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.o" "CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.o" "CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.o" "CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.o"
 /usr/bin/ranlib libzatestil-bot.util.a

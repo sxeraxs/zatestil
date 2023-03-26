@@ -18,6 +18,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/log/CMakeFiles/zatestil-bot.log.dir/DependInfo.cmake"
   "/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util/CMakeFiles/zatestil-bot.util.dir/DependInfo.cmake"
   "/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/tgbot/tgbot-cpp/CMakeFiles/TgBot.dir/DependInfo.cmake"
+  "/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/sfe/CMakeFiles/sfe.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

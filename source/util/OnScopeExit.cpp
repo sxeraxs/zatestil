@@ -4,16 +4,12 @@
 
 #include <util/OnScopeExit.hpp>
 
-namespace ztsl {
+namespace ztstl::util {
 
-namespace util {
+OnScopeExit::OnScopeExit(std::function<void()> func) : m_function {std::move(func)} {}
 
-    OnScopeExit::OnScopeExit(std::function<void()> func) : m_function {std::move(func)} {}
+OnScopeExit::~OnScopeExit() {
+    m_function();
+}
 
-    OnScopeExit::~OnScopeExit() {
-        m_function();
-    }
-
-}// namespace util
-
-}// namespace ztsl
+}// namespace ztstl::util

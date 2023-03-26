@@ -199,6 +199,30 @@ OnScopeExit.cpp.s:
 	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug && $(MAKE) $(MAKESILENT) -f source/util/CMakeFiles/zatestil-bot.util.dir/build.make source/util/CMakeFiles/zatestil-bot.util.dir/OnScopeExit.cpp.s
 .PHONY : OnScopeExit.cpp.s
 
+Semaphore.o: Semaphore.cpp.o
+.PHONY : Semaphore.o
+
+# target to build an object file
+Semaphore.cpp.o:
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug && $(MAKE) $(MAKESILENT) -f source/util/CMakeFiles/zatestil-bot.util.dir/build.make source/util/CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.o
+.PHONY : Semaphore.cpp.o
+
+Semaphore.i: Semaphore.cpp.i
+.PHONY : Semaphore.i
+
+# target to preprocess a source file
+Semaphore.cpp.i:
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug && $(MAKE) $(MAKESILENT) -f source/util/CMakeFiles/zatestil-bot.util.dir/build.make source/util/CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.i
+.PHONY : Semaphore.cpp.i
+
+Semaphore.s: Semaphore.cpp.s
+.PHONY : Semaphore.s
+
+# target to generate assembly for a file
+Semaphore.cpp.s:
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug && $(MAKE) $(MAKESILENT) -f source/util/CMakeFiles/zatestil-bot.util.dir/build.make source/util/CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.s
+.PHONY : Semaphore.cpp.s
+
 Singleton.o: Singleton.cpp.o
 .PHONY : Singleton.o
 
@@ -223,6 +247,54 @@ Singleton.cpp.s:
 	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug && $(MAKE) $(MAKESILENT) -f source/util/CMakeFiles/zatestil-bot.util.dir/build.make source/util/CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.s
 .PHONY : Singleton.cpp.s
 
+ThreadPool.o: ThreadPool.cpp.o
+.PHONY : ThreadPool.o
+
+# target to build an object file
+ThreadPool.cpp.o:
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug && $(MAKE) $(MAKESILENT) -f source/util/CMakeFiles/zatestil-bot.util.dir/build.make source/util/CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.o
+.PHONY : ThreadPool.cpp.o
+
+ThreadPool.i: ThreadPool.cpp.i
+.PHONY : ThreadPool.i
+
+# target to preprocess a source file
+ThreadPool.cpp.i:
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug && $(MAKE) $(MAKESILENT) -f source/util/CMakeFiles/zatestil-bot.util.dir/build.make source/util/CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.i
+.PHONY : ThreadPool.cpp.i
+
+ThreadPool.s: ThreadPool.cpp.s
+.PHONY : ThreadPool.s
+
+# target to generate assembly for a file
+ThreadPool.cpp.s:
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug && $(MAKE) $(MAKESILENT) -f source/util/CMakeFiles/zatestil-bot.util.dir/build.make source/util/CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.s
+.PHONY : ThreadPool.cpp.s
+
+stacktrace.o: stacktrace.cpp.o
+.PHONY : stacktrace.o
+
+# target to build an object file
+stacktrace.cpp.o:
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug && $(MAKE) $(MAKESILENT) -f source/util/CMakeFiles/zatestil-bot.util.dir/build.make source/util/CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.o
+.PHONY : stacktrace.cpp.o
+
+stacktrace.i: stacktrace.cpp.i
+.PHONY : stacktrace.i
+
+# target to preprocess a source file
+stacktrace.cpp.i:
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug && $(MAKE) $(MAKESILENT) -f source/util/CMakeFiles/zatestil-bot.util.dir/build.make source/util/CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.i
+.PHONY : stacktrace.cpp.i
+
+stacktrace.s: stacktrace.cpp.s
+.PHONY : stacktrace.s
+
+# target to generate assembly for a file
+stacktrace.cpp.s:
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug && $(MAKE) $(MAKESILENT) -f source/util/CMakeFiles/zatestil-bot.util.dir/build.make source/util/CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.s
+.PHONY : stacktrace.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -239,9 +311,18 @@ help:
 	@echo "... OnScopeExit.o"
 	@echo "... OnScopeExit.i"
 	@echo "... OnScopeExit.s"
+	@echo "... Semaphore.o"
+	@echo "... Semaphore.i"
+	@echo "... Semaphore.s"
 	@echo "... Singleton.o"
 	@echo "... Singleton.i"
 	@echo "... Singleton.s"
+	@echo "... ThreadPool.o"
+	@echo "... ThreadPool.i"
+	@echo "... ThreadPool.s"
+	@echo "... stacktrace.o"
+	@echo "... stacktrace.i"
+	@echo "... stacktrace.s"
 .PHONY : help
 
 

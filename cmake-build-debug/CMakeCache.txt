@@ -20,17 +20,47 @@ BUILD_DOCUMENTATION:BOOL=OFF
 //Build tgbot-cpp shared/static library.
 BUILD_SHARED_LIBS:BOOL=OFF
 
+//Boost context library (debug)
+Boost_CONTEXT_LIBRARY_DEBUG:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_context-mt-d-x64.a
+
+//Boost context library (release)
+Boost_CONTEXT_LIBRARY_RELEASE:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_context-mt-x64.a
+
+//Boost coroutine library (debug)
+Boost_COROUTINE_LIBRARY_DEBUG:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_coroutine-mt-d-x64.a
+
+//Boost coroutine library (release)
+Boost_COROUTINE_LIBRARY_RELEASE:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_coroutine-mt-x64.a
+
 //The directory containing a CMake configuration file for Boost.
-Boost_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/Boost
+Boost_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/Boost
 
 //Path to a file.
-Boost_INCLUDE_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include
+Boost_INCLUDE_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include
 
 //Boost library directory DEBUG
-Boost_LIBRARY_DIR_DEBUG:PATH=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib
+Boost_LIBRARY_DIR_DEBUG:PATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib
 
 //Boost library directory RELEASE
-Boost_LIBRARY_DIR_RELEASE:PATH=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib
+Boost_LIBRARY_DIR_RELEASE:PATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib
+
+//Boost program_options library (debug)
+Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_program_options-mt-d-x64.a
+
+//Boost program_options library (release)
+Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_program_options-mt-x64.a
+
+//Boost system library (debug)
+Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_system-mt-d-x64.a
+
+//Boost system library (release)
+Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_system-mt-x64.a
+
+//Boost thread library (debug)
+Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_thread-mt-d-x64.a
+
+//Boost thread library (release)
+Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_thread-mt-x64.a
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
@@ -287,13 +317,13 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //The directory containing a CMake configuration file for CURL.
-CURL_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/CURL
+CURL_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/CURL
 
 //Set to ON to enable building of tests
 ENABLE_TESTS:BOOL=OFF
 
 //The directory containing a CMake configuration file for GTest.
-GTest_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/GTest
+GTest_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/GTest
 
 //Hunter configuration types
 HUNTER_CONFIGURATION_TYPES:STRING=Release;Debug
@@ -311,13 +341,13 @@ HUNTER_STATUS_PRINT:BOOL=ON
 HUNTER_TLS_VERIFY:BOOL=ON
 
 //Path to a library.
-OPENSSL_CRYPTO_LIBRARY:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libcrypto.a
+OPENSSL_CRYPTO_LIBRARY:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libcrypto.a
 
 //Path to a file.
-OPENSSL_INCLUDE_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include
+OPENSSL_INCLUDE_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include
 
 //Path to a library.
-OPENSSL_SSL_LIBRARY:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libssl.a
+OPENSSL_SSL_LIBRARY:FILEPATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libssl.a
 
 //Path to a program.
 ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
@@ -332,22 +362,22 @@ TgBot_BINARY_DIR:STATIC=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-de
 TgBot_IS_TOP_LEVEL:STATIC=OFF
 
 //Dependencies for the target
-TgBot_LIB_DEPENDS:STATIC=general;-lpthread;general;ZLIB::zlib;general;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libssl.a;general;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libcrypto.a;general;dl;optimized;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_system-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_system-mt-d-x64.a;
+TgBot_LIB_DEPENDS:STATIC=general;-lpthread;general;ZLIB::zlib;general;/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libssl.a;general;/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libcrypto.a;general;dl;optimized;/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_system-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_system-mt-d-x64.a;
 
 //Value Computed by CMake
 TgBot_SOURCE_DIR:STATIC=/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp
 
 //The directory containing a CMake configuration file for ZLIB.
-ZLIB_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/ZLIB
+ZLIB_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/ZLIB
 
 //The directory containing a CMake configuration file for fmt.
-fmt_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/fmt
+fmt_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/fmt
 
 //The directory containing a CMake configuration file for intsizeof.
-intsizeof_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/intsizeof
+intsizeof_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/intsizeof
 
 //The directory containing a CMake configuration file for spdlog.
-spdlog_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/spdlog
+spdlog_DIR:PATH=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/spdlog
 
 //Value Computed by CMake
 zatestil-bot_BINARY_DIR:STATIC=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug
@@ -363,6 +393,14 @@ zatestil-bot_SOURCE_DIR:STATIC=/home/aalisher/CLionProjects/zatestil-bot
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_CONTEXT_LIBRARY_DEBUG
+Boost_CONTEXT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CONTEXT_LIBRARY_RELEASE
+Boost_CONTEXT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_COROUTINE_LIBRARY_DEBUG
+Boost_COROUTINE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_COROUTINE_LIBRARY_RELEASE
+Boost_COROUTINE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_DIR
 Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_INCLUDE_DIR
@@ -371,6 +409,18 @@ Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
 Boost_LIBRARY_DIR_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_LIBRARY_DIR_RELEASE
 Boost_LIBRARY_DIR_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG
+Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE
+Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
+Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
+Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
+Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
+Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -514,7 +564,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -561,19 +611,19 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CURL_DIR
 CURL_DIR-ADVANCED:INTERNAL=1
 //Details about finding CURL
-FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/CURL/CURLConfig.cmake][c ][v7.74.0-DEV(7.58.0)]
+FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/CURL/CURLConfig.cmake][c ][v7.74.0-DEV(7.58.0)]
 //Details about finding OpenSSL
-FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libssl.a;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libcrypto.a;dl][/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include][v1.1.1n()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libssl.a;/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libcrypto.a;dl][/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include][v1.1.1n()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[ZLIB::zlib][/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include][v1.2.12()]
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[ZLIB::zlib][/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include][v1.2.12()]
 HUNTER_CACHED_BUILD_SHARED_LIBS:INTERNAL=
 HUNTER_CACHED_CONFIGURATION_TYPES:INTERNAL=Release;Debug
 HUNTER_CACHED_ROOT:INTERNAL=/home/aalisher/.hunter
 HUNTER_CONFIG_SHA1:INTERNAL=f96017a20fa9c76bbf3cc0012a22e68b7a39db78
 HUNTER_SHA1:INTERNAL=17fd3b9f0b8c271eac9b71e30a6aa1b9fecab299
-HUNTER_TOOLCHAIN_SHA1:INTERNAL=585c03ec7cb3eaa20ab3f36bab6d753248cbc67e
+HUNTER_TOOLCHAIN_SHA1:INTERNAL=4162dcbada1a0d30198880e0320714fd2595dde1
 HUNTER_URL:INTERNAL=https://github.com/cpp-pm/hunter/archive/v0.24.2.tar.gz
 HUNTER_VERSION:INTERNAL=0.24.2
 //ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
@@ -589,13 +639,13 @@ ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
 //TgBot libraries
 TGBOT_LIBRARIES:INTERNAL=
 //Components requested for this build tree.
-_Boost_COMPONENTS_SEARCHED:INTERNAL=
+_Boost_COMPONENTS_SEARCHED:INTERNAL=context;coroutine;program_options;system;thread
 //Last used Boost_INCLUDE_DIR value.
-_Boost_INCLUDE_DIR_LAST:INTERNAL=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include
 //Last used Boost_LIBRARY_DIR_DEBUG value.
-_Boost_LIBRARY_DIR_DEBUG_LAST:INTERNAL=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib
+_Boost_LIBRARY_DIR_DEBUG_LAST:INTERNAL=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib
 //Last used Boost_LIBRARY_DIR_RELEASE value.
-_Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib
+_Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib
 //Last used Boost_NAMESPACE value.
 _Boost_NAMESPACE_LAST:INTERNAL=boost
 //Last used Boost_USE_MULTITHREADED value.
@@ -606,4 +656,6 @@ _Boost_USE_STATIC_LIBS_LAST:INTERNAL=ON
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//Have symbol clock_gettime
+_hunter_boost_have_clock_gettime:INTERNAL=1
 

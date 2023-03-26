@@ -2,24 +2,20 @@
 
 #include <functional>
 
-namespace ztsl {
+namespace ztstl::util {
 
-namespace util {
+class OnScopeExit {
+   public:
+    ~OnScopeExit();
+    OnScopeExit(OnScopeExit const&) = default;
+    OnScopeExit(OnScopeExit&&) noexcept = default;
+    OnScopeExit& operator=(OnScopeExit const&) = default;
+    OnScopeExit& operator=(OnScopeExit&&) noexcept = default;
 
-    class OnScopeExit {
-       public:
-        ~OnScopeExit();
-        OnScopeExit(OnScopeExit const&) = default;
-        OnScopeExit(OnScopeExit&&) noexcept = default;
-        OnScopeExit& operator=(OnScopeExit const&) = default;
-        OnScopeExit& operator=(OnScopeExit&&) noexcept = default;
+    explicit OnScopeExit(std::function<void()> func);
 
-        explicit OnScopeExit(std::function<void()> func);
+   private:
+    std::function<void()> m_function;
+};
 
-       private:
-        std::function<void()> m_function;
-    };
-
-}// namespace util
-
-}// namespace ztsl
+}// namespace ztstl::util

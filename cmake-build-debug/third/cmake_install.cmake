@@ -54,6 +54,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/sfe/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/spdlog/cmake_install.cmake")
 endif()
 

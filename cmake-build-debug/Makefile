@@ -162,6 +162,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named sfe
+
+# Build rule for target.
+sfe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sfe
+.PHONY : sfe
+
+# fast build rule for target.
+sfe/fast:
+	$(MAKE) $(MAKESILENT) -f third/sfe/CMakeFiles/sfe.dir/build.make third/sfe/CMakeFiles/sfe.dir/build
+.PHONY : sfe/fast
+
+#=============================================================================
 # Target rules for targets named TgBot
 
 # Build rule for target.
@@ -252,6 +265,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... TgBot"
+	@echo "... sfe"
 	@echo "... zatestil-bot"
 	@echo "... zatestil-bot.config"
 	@echo "... zatestil-bot.log"

@@ -24,9 +24,10 @@
 			"cmake/module.cmake",
 			"application/CMakeLists.txt",
 			"source/log/CMakeLists.txt",
-			"/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/spdlog/spdlogConfigTargets.cmake",
-			"/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/spdlog/spdlogConfig.cmake",
+			"/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/spdlog/spdlogConfigTargets.cmake",
+			"/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/spdlog/spdlogConfig.cmake",
 			"CMakeLists.txt",
+			"source/util/CMakeLists.txt",
 			"third/tgbot/tgbot-cpp/CMakeLists.txt"
 		],
 		"nodes" : 
@@ -73,7 +74,7 @@
 			{
 				"command" : 6,
 				"file" : 5,
-				"line" : 37,
+				"line" : 40,
 				"parent" : 7
 			},
 			{
@@ -100,27 +101,48 @@
 				"file" : 6
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 6,
-				"line" : 84,
+				"line" : 1,
 				"parent" : 13
 			},
 			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 108,
+				"parent" : 14
+			},
+			{
+				"file" : 7
+			},
+			{
+				"command" : 2,
+				"file" : 7,
+				"line" : 84,
+				"parent" : 16
+			},
+			{
 				"command" : 7,
 				"file" : 5,
-				"line" : 40,
+				"line" : 44,
 				"parent" : 7
 			},
 			{
 				"command" : 7,
 				"file" : 5,
-				"line" : 42,
+				"line" : 46,
 				"parent" : 7
 			},
 			{
 				"command" : 7,
 				"file" : 5,
-				"line" : 41,
+				"line" : 47,
+				"parent" : 7
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 45,
 				"parent" : 7
 			}
 		]
@@ -155,17 +177,21 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 15,
+					"backtrace" : 18,
 					"path" : "/home/aalisher/CLionProjects/zatestil-bot/include"
 				},
 				{
-					"backtrace" : 16,
+					"backtrace" : 19,
+					"path" : "/home/aalisher/CLionProjects/zatestil-bot/third/sfe/sfe/include"
+				},
+				{
+					"backtrace" : 20,
 					"path" : "/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include"
 				},
 				{
-					"backtrace" : 17,
+					"backtrace" : 21,
 					"isSystem" : true,
-					"path" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"
+					"path" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include"
 				}
 			],
 			"language" : "CXX",
@@ -186,6 +212,10 @@
 	],
 	"dependencies" : 
 	[
+		{
+			"backtrace" : 3,
+			"id" : "sfe::@c8286e3b5e8d55fe7cb8"
+		},
 		{
 			"backtrace" : 3,
 			"id" : "TgBot::@8d3b3ae5f74371b683b9"
@@ -233,47 +263,82 @@
 			},
 			{
 				"backtrace" : 3,
+				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_system-mt-d-x64.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_program_options-mt-d-x64.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_thread-mt-d-x64.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_context-mt-d-x64.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_coroutine-mt-d-x64.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
 				"fragment" : "../third/tgbot/tgbot-cpp/libTgBotd.a",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 3,
+				"fragment" : "../source/log/libzatestil-bot.log.a",
+				"role" : "libraries"
+			},
+			{
 				"backtrace" : 6,
-				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libspdlogd.a",
+				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libspdlogd.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 12,
-				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libfmtd.a",
+				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libfmtd.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 14,
+				"backtrace" : 15,
+				"fragment" : "../third/sfe/libsfed.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 17,
 				"fragment" : "-lpthread",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 14,
-				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libzd.a",
+				"backtrace" : 17,
+				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libzd.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 14,
-				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libssl.a",
+				"backtrace" : 17,
+				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libssl.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 14,
-				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libcrypto.a",
+				"backtrace" : 17,
+				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libcrypto.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 14,
+				"backtrace" : 17,
 				"fragment" : "-ldl",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 14,
-				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_system-mt-d-x64.a",
+				"backtrace" : 3,
+				"fragment" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_system-mt-d-x64.a",
 				"role" : "libraries"
 			}
 		],

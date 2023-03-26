@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DHAVE_CURL
 
-CXX_INCLUDES = -I/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include -isystem /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include
+CXX_INCLUDES = -I/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include -isystem /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include
 
 CXX_FLAGS =  -Wall -g -D_DEBUG -g -O0 -fPIC -fdiagnostics-color=always -std=c++14
 

@@ -26,6 +26,70 @@
 			"value" : "OFF"
 		},
 		{
+			"name" : "Boost_CONTEXT_LIBRARY_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost context library (debug)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_context-mt-d-x64.a"
+		},
+		{
+			"name" : "Boost_CONTEXT_LIBRARY_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost context library (release)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_context-mt-x64.a"
+		},
+		{
+			"name" : "Boost_COROUTINE_LIBRARY_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost coroutine library (debug)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_coroutine-mt-d-x64.a"
+		},
+		{
+			"name" : "Boost_COROUTINE_LIBRARY_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost coroutine library (release)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_coroutine-mt-x64.a"
+		},
+		{
 			"name" : "Boost_DIR",
 			"properties" : 
 			[
@@ -39,7 +103,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/Boost"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/Boost"
 		},
 		{
 			"name" : "Boost_INCLUDE_DIR",
@@ -55,7 +119,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include"
 		},
 		{
 			"name" : "Boost_LIBRARY_DIR_DEBUG",
@@ -71,7 +135,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib"
 		},
 		{
 			"name" : "Boost_LIBRARY_DIR_RELEASE",
@@ -87,7 +151,103 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib"
+		},
+		{
+			"name" : "Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost program_options library (debug)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_program_options-mt-d-x64.a"
+		},
+		{
+			"name" : "Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost program_options library (release)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_program_options-mt-x64.a"
+		},
+		{
+			"name" : "Boost_SYSTEM_LIBRARY_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost system library (debug)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_system-mt-d-x64.a"
+		},
+		{
+			"name" : "Boost_SYSTEM_LIBRARY_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost system library (release)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_system-mt-x64.a"
+		},
+		{
+			"name" : "Boost_THREAD_LIBRARY_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost thread library (debug)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_thread-mt-d-x64.a"
+		},
+		{
+			"name" : "Boost_THREAD_LIBRARY_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost thread library (release)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_thread-mt-x64.a"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -1227,7 +1387,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "13"
+			"value" : "14"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -1615,7 +1775,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/CURL"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/CURL"
 		},
 		{
 			"name" : "ENABLE_TESTS",
@@ -1639,7 +1799,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/CURL/CURLConfig.cmake][c ][v7.74.0-DEV(7.58.0)]"
+			"value" : "[/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/CURL/CURLConfig.cmake][c ][v7.74.0-DEV(7.58.0)]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL",
@@ -1651,7 +1811,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libssl.a;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libcrypto.a;dl][/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include][v1.1.1n()]"
+			"value" : "[/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libssl.a;/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libcrypto.a;dl][/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include][v1.1.1n()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
@@ -1675,7 +1835,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[ZLIB::zlib][/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include][v1.2.12()]"
+			"value" : "[ZLIB::zlib][/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include][v1.2.12()]"
 		},
 		{
 			"name" : "GTest_DIR",
@@ -1687,7 +1847,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/GTest"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/GTest"
 		},
 		{
 			"name" : "HUNTER_CACHED_BUILD_SHARED_LIBS",
@@ -1819,7 +1979,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "585c03ec7cb3eaa20ab3f36bab6d753248cbc67e"
+			"value" : "4162dcbada1a0d30198880e0320714fd2595dde1"
 		},
 		{
 			"name" : "HUNTER_URL",
@@ -1859,7 +2019,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libcrypto.a"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libcrypto.a"
 		},
 		{
 			"name" : "OPENSSL_INCLUDE_DIR",
@@ -1875,7 +2035,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include"
 		},
 		{
 			"name" : "OPENSSL_LIBRARIES",
@@ -1907,7 +2067,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libssl.a"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libssl.a"
 		},
 		{
 			"name" : "ProcessorCount_cmd_nproc",
@@ -1987,7 +2147,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "general;-lpthread;general;ZLIB::zlib;general;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libssl.a;general;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libcrypto.a;general;dl;optimized;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_system-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_system-mt-d-x64.a;"
+			"value" : "general;-lpthread;general;ZLIB::zlib;general;/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libssl.a;general;/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libcrypto.a;general;dl;optimized;/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_system-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_system-mt-d-x64.a;"
 		},
 		{
 			"name" : "TgBot_SOURCE_DIR",
@@ -2011,7 +2171,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/ZLIB"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/ZLIB"
 		},
 		{
 			"name" : "ZLIB_INCLUDE_DIR",
@@ -2055,7 +2215,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : ""
+			"value" : "context;coroutine;program_options;system;thread"
 		},
 		{
 			"name" : "_Boost_INCLUDE_DIR_LAST",
@@ -2067,7 +2227,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include"
 		},
 		{
 			"name" : "_Boost_LIBRARY_DIR_DEBUG_LAST",
@@ -2079,7 +2239,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib"
 		},
 		{
 			"name" : "_Boost_LIBRARY_DIR_RELEASE_LAST",
@@ -2091,7 +2251,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib"
 		},
 		{
 			"name" : "_Boost_NAMESPACE_LAST",
@@ -2154,6 +2314,18 @@
 			"value" : "/usr/local"
 		},
 		{
+			"name" : "_hunter_boost_have_clock_gettime",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have symbol clock_gettime"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
 			"name" : "fmt_DIR",
 			"properties" : 
 			[
@@ -2163,7 +2335,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/fmt"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/fmt"
 		},
 		{
 			"name" : "intsizeof_DIR",
@@ -2175,7 +2347,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/intsizeof"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/intsizeof"
 		},
 		{
 			"name" : "spdlog_DIR",
@@ -2187,7 +2359,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/spdlog"
+			"value" : "/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/cmake/spdlog"
 		},
 		{
 			"name" : "zatestil-bot_BINARY_DIR",

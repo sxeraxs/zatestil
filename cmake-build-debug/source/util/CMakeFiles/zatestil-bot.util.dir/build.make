@@ -83,10 +83,24 @@ source/util/CMakeFiles/zatestil-bot.util.dir/OnScopeExit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zatestil-bot.util.dir/OnScopeExit.cpp.s"
 	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aalisher/CLionProjects/zatestil-bot/source/util/OnScopeExit.cpp -o CMakeFiles/zatestil-bot.util.dir/OnScopeExit.cpp.s
 
+source/util/CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.o: source/util/CMakeFiles/zatestil-bot.util.dir/flags.make
+source/util/CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.o: /home/aalisher/CLionProjects/zatestil-bot/source/util/Semaphore.cpp
+source/util/CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.o: source/util/CMakeFiles/zatestil-bot.util.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object source/util/CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.o"
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/util/CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.o -MF CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.o.d -o CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.o -c /home/aalisher/CLionProjects/zatestil-bot/source/util/Semaphore.cpp
+
+source/util/CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.i"
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aalisher/CLionProjects/zatestil-bot/source/util/Semaphore.cpp > CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.i
+
+source/util/CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.s"
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aalisher/CLionProjects/zatestil-bot/source/util/Semaphore.cpp -o CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.s
+
 source/util/CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.o: source/util/CMakeFiles/zatestil-bot.util.dir/flags.make
 source/util/CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.o: /home/aalisher/CLionProjects/zatestil-bot/source/util/Singleton.cpp
 source/util/CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.o: source/util/CMakeFiles/zatestil-bot.util.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object source/util/CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object source/util/CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.o"
 	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/util/CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.o -MF CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.o.d -o CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.o -c /home/aalisher/CLionProjects/zatestil-bot/source/util/Singleton.cpp
 
 source/util/CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.i: cmake_force
@@ -97,19 +111,53 @@ source/util/CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.s"
 	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aalisher/CLionProjects/zatestil-bot/source/util/Singleton.cpp -o CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.s
 
+source/util/CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.o: source/util/CMakeFiles/zatestil-bot.util.dir/flags.make
+source/util/CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.o: /home/aalisher/CLionProjects/zatestil-bot/source/util/ThreadPool.cpp
+source/util/CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.o: source/util/CMakeFiles/zatestil-bot.util.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object source/util/CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.o"
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/util/CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.o -MF CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.o.d -o CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.o -c /home/aalisher/CLionProjects/zatestil-bot/source/util/ThreadPool.cpp
+
+source/util/CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.i"
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aalisher/CLionProjects/zatestil-bot/source/util/ThreadPool.cpp > CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.i
+
+source/util/CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.s"
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aalisher/CLionProjects/zatestil-bot/source/util/ThreadPool.cpp -o CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.s
+
+source/util/CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.o: source/util/CMakeFiles/zatestil-bot.util.dir/flags.make
+source/util/CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.o: /home/aalisher/CLionProjects/zatestil-bot/source/util/stacktrace.cpp
+source/util/CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.o: source/util/CMakeFiles/zatestil-bot.util.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object source/util/CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.o"
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT source/util/CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.o -MF CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.o.d -o CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.o -c /home/aalisher/CLionProjects/zatestil-bot/source/util/stacktrace.cpp
+
+source/util/CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.i"
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aalisher/CLionProjects/zatestil-bot/source/util/stacktrace.cpp > CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.i
+
+source/util/CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.s"
+	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aalisher/CLionProjects/zatestil-bot/source/util/stacktrace.cpp -o CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.s
+
 # Object files for target zatestil-bot.util
 zatestil__bot_util_OBJECTS = \
 "CMakeFiles/zatestil-bot.util.dir/OnScopeExit.cpp.o" \
-"CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.o"
+"CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.o" \
+"CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.o" \
+"CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.o" \
+"CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.o"
 
 # External object files for target zatestil-bot.util
 zatestil__bot_util_EXTERNAL_OBJECTS =
 
 source/util/libzatestil-bot.util.a: source/util/CMakeFiles/zatestil-bot.util.dir/OnScopeExit.cpp.o
+source/util/libzatestil-bot.util.a: source/util/CMakeFiles/zatestil-bot.util.dir/Semaphore.cpp.o
 source/util/libzatestil-bot.util.a: source/util/CMakeFiles/zatestil-bot.util.dir/Singleton.cpp.o
+source/util/libzatestil-bot.util.a: source/util/CMakeFiles/zatestil-bot.util.dir/ThreadPool.cpp.o
+source/util/libzatestil-bot.util.a: source/util/CMakeFiles/zatestil-bot.util.dir/stacktrace.cpp.o
 source/util/libzatestil-bot.util.a: source/util/CMakeFiles/zatestil-bot.util.dir/build.make
 source/util/libzatestil-bot.util.a: source/util/CMakeFiles/zatestil-bot.util.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libzatestil-bot.util.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libzatestil-bot.util.a"
 	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && $(CMAKE_COMMAND) -P CMakeFiles/zatestil-bot.util.dir/cmake_clean_target.cmake
 	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/zatestil-bot.util.dir/link.txt --verbose=$(VERBOSE)
 

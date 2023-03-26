@@ -1,5 +1,4 @@
 /home/aalisher/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -G "CodeBlocks - Unix Makefiles" -S /home/aalisher/CLionProjects/zatestil-bot -B /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug
--- BOOST_COMPONENTS system;program_options;thread;context;coroutine
 -- [hunter] Calculating Toolchain-SHA1
 -- [hunter] Calculating Config-SHA1
 -- [hunter] HUNTER_ROOT: /home/aalisher/.hunter
@@ -37,8 +36,6 @@ CMake Warning (dev) at third/tgbot/tgbot-cpp/CMakeLists.txt:47 (find_package):
   For compatibility, CMake is ignoring the variable.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
--- Found ZLIB: ZLIB::zlib (found version "1.2.12") 
--- Found OpenSSL: /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libssl.a;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libcrypto.a;dl (found version "1.1.1n") 
 CMake Warning (dev) at third/tgbot/tgbot-cpp/CMakeLists.txt:54 (find_package):
   Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
   Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
@@ -55,19 +52,25 @@ CMake Warning (dev) at third/tgbot/tgbot-cpp/CMakeLists.txt:54 (find_package):
   For compatibility, CMake is ignoring the variable.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
--- Found CURL: /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/CURL/CURLConfig.cmake (found suitable version "7.74.0-DEV", minimum required is "7.58.0")  
 Boost 1.65.1 found.
 Found Boost components:
    system
 -- Boost version: 1.78.0
+-- Found the following Boost libraries:
+--   system
+--   program_options
+--   thread
+--   context
+--   coroutine
 -- module zatestil-bot.config is building as a static library
 -- module zatestil-bot.log is building as a static library
 -- -- dependencies spdlog::spdlog
 -- module zatestil-bot.util is building as a static library
+-- -- dependencies spdlog::spdlog;optimized;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_system-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_system-mt-d-x64.a;optimized;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_program_options-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_program_options-mt-d-x64.a;optimized;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_thread-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_thread-mt-d-x64.a;optimized;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_context-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_context-mt-d-x64.a;optimized;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_coroutine-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_coroutine-mt-d-x64.a;zatestil-bot.log;sfe
 -- application zatestil-bot.test is building as an executable file
 -- -- dependencies GTest::gtest_main
 -- application zatestil-bot is building as an executable file
--- -- dependencies zatestil-bot.config;zatestil-bot.log;zatestil-bot.util;tgbot
+-- -- dependencies zatestil-bot.config;zatestil-bot.log;zatestil-bot.util;optimized;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_system-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_system-mt-d-x64.a;optimized;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_program_options-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_program_options-mt-d-x64.a;optimized;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_thread-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_thread-mt-d-x64.a;optimized;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_context-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_context-mt-d-x64.a;optimized;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_coroutine-mt-x64.a;debug;/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_coroutine-mt-d-x64.a;tgbot
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug

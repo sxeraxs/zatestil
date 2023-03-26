@@ -3,12 +3,12 @@
 
 source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjects/zatestil-bot/source/log/log.cpp \
   /usr/include/stdc-predef.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/async.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/async_logger.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/logger.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/common.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/tweakme.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/null_mutex.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/async.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/async_logger.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/logger.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/common.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/tweakme.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/null_mutex.h \
   /usr/include/c++/10/atomic \
   /usr/include/c++/10/bits/atomic_base.h \
   /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h \
@@ -237,13 +237,13 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
   /usr/include/c++/10/bits/stl_vector.h \
   /usr/include/c++/10/bits/stl_bvector.h \
   /usr/include/c++/10/bits/vector.tcc \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/fmt/fmt.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/fmt/core.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/fmt/fmt.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/fmt/core.h \
   /usr/include/c++/10/cstddef \
   /usr/include/c++/10/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/fmt/format.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/fmt/format.h \
   /usr/include/c++/10/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -268,59 +268,57 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
   /usr/include/c++/10/tr1/poly_hermite.tcc \
   /usr/include/c++/10/tr1/poly_laguerre.tcc \
   /usr/include/c++/10/tr1/riemann_zeta.tcc \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/fmt/core.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/log_msg.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/backtracer.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/log_msg_buffer.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/circular_q.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/fmt/core.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/log_msg.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/backtracer.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/log_msg_buffer.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/circular_q.h \
   /usr/include/c++/10/cassert \
   /usr/include/assert.h \
   /usr/include/c++/10/mutex \
   /usr/include/c++/10/bits/std_mutex.h \
   /usr/include/c++/10/bits/unique_lock.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/registry.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/thread_pool.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/mpmc_blocking_q.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/registry.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/thread_pool.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/mpmc_blocking_q.h \
   /usr/include/c++/10/condition_variable \
   /usr/include/c++/10/stop_token \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/os.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/os.h \
   /usr/include/c++/10/thread \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/sinks/stdout_color_sinks.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/sinks/ansicolor_sink.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/console_globals.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/sinks/sink.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/formatter.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/synchronous_factory.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/sinks/stdout_color_sinks.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/sinks/ansicolor_sink.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/console_globals.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/sinks/sink.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/formatter.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/synchronous_factory.h \
   /home/aalisher/CLionProjects/zatestil-bot/include/log/log.hpp \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/spdlog.h \
-  /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/version.h
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/spdlog.h \
+  /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/version.h
 
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/spdlog.h:
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/synchronous_factory.h:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/sinks/sink.h:
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/formatter.h:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/sinks/stdout_color_sinks.h:
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/sinks/sink.h:
+
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/console_globals.h:
+
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/sinks/stdout_color_sinks.h:
 
 /usr/include/c++/10/thread:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/thread_pool.h:
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/mpmc_blocking_q.h:
 
-/usr/include/c++/10/bits/unique_lock.h:
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/registry.h:
 
 /usr/include/c++/10/bits/std_mutex.h:
 
 /usr/include/assert.h:
 
-/usr/include/c++/10/cassert:
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/log_msg_buffer.h:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/circular_q.h:
-
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/os.h:
-
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/backtracer.h:
-
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/log_msg.h:
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/backtracer.h:
 
 /usr/include/c++/10/tr1/riemann_zeta.tcc:
 
@@ -346,8 +344,6 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/c++/10/bits/erase_if.h:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/console_globals.h:
-
 /usr/include/c++/10/bits/hashtable.h:
 
 /usr/include/c++/10/functional:
@@ -359,6 +355,8 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 /usr/include/c++/10/bit:
 
 /usr/include/c++/10/ext/aligned_buffer.h:
+
+/usr/include/c++/10/bits/shared_ptr_base.h:
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/ctype_base.h:
 
@@ -394,9 +392,11 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/c++/10/stdexcept:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/sinks/ansicolor_sink.h:
-
 /usr/include/x86_64-linux-gnu/c++/10/bits/error_constants.h:
+
+/usr/include/c++/10/ostream:
+
+/usr/include/c++/10/system_error:
 
 /usr/include/c++/10/bits/node_handle.h:
 
@@ -416,8 +416,6 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/errno.h:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/fmt/core.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
@@ -425,8 +423,6 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/usr/include/c++/10/cstdio:
 
 /usr/include/c++/10/ext/string_conversions.h:
 
@@ -464,6 +460,8 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/c++/10/bits/functexcept.h:
 
+/usr/include/c++/10/string:
+
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/c++/10/new:
@@ -478,11 +476,19 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/version.h:
+
+/usr/include/c++/10/cassert:
+
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/async.h:
+
 /usr/include/c++/10/bits/stl_algobase.h:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/fmt/format.h:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
@@ -494,14 +500,6 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/stdlib.h:
-
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
@@ -512,10 +510,6 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/c++/10/atomic:
 
-/usr/include/c++/10/bits/shared_ptr_base.h:
-
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/async.h:
-
 /usr/include/x86_64-linux-gnu/c++/10/bits/ctype_inline.h:
 
 /usr/include/c++/10/bits/exception.h:
@@ -524,15 +518,11 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/c++/10/bits/cpp_type_traits.h:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/mpmc_blocking_q.h:
-
 /usr/include/c++/10/initializer_list:
 
 /usr/include/c++/10/string_view:
 
 /usr/include/c++/10/bits/range_cmp.h:
-
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/fmt/fmt.h:
 
 /usr/include/c++/10/bits/stl_iterator_base_types.h:
 
@@ -544,17 +534,11 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/time.h:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/registry.h:
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/sinks/ansicolor_sink.h:
 
 /usr/include/c++/10/compare:
 
 /usr/include/c++/10/utility:
-
-/usr/include/c++/10/ostream:
-
-/usr/include/c++/10/system_error:
-
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/tweakme.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
@@ -566,33 +550,35 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/c++/10/bits/stl_algo.h:
 
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/c++/10/bits/unique_lock.h:
+
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/null_mutex.h:
+
+/usr/include/c++/10/bits/uses_allocator.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/10/include/stdint.h:
+
+/usr/include/c++/10/ext/concurrence.h:
+
+/usr/include/c++/10/bits/stl_pair.h:
+
+/usr/include/c++/10/bits/atomic_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/stdlib.h:
+
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/tweakme.h:
+
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/alloca.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/include/c++/10/ext/alloc_traits.h:
-
-/home/aalisher/CLionProjects/zatestil-bot/source/log/log.cpp:
-
-/home/aalisher/CLionProjects/zatestil-bot/include/log/log.hpp:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/logger.h:
-
-/usr/include/c++/10/condition_variable:
-
-/usr/include/c++/10/typeinfo:
-
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/null_mutex.h:
-
-/usr/include/string.h:
-
-/usr/include/c++/10/unordered_map:
-
-/usr/include/c++/10/type_traits:
 
 /usr/include/c++/10/array:
 
@@ -606,27 +592,35 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/stdc-predef.h:
 
-/usr/include/c++/10/pstl/pstl_config.h:
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/usr/include/c++/10/ext/alloc_traits.h:
+
+/home/aalisher/CLionProjects/zatestil-bot/source/log/log.cpp:
+
+/home/aalisher/CLionProjects/zatestil-bot/include/log/log.hpp:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /usr/include/c++/10/bits/stl_iterator.h:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/async_logger.h:
+/usr/include/c++/10/pstl/pstl_config.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+/usr/include/c++/10/condition_variable:
 
-/usr/include/c++/10/string:
+/usr/include/c++/10/typeinfo:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/common.h:
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/async_logger.h:
 
-/usr/include/c++/10/ext/concurrence.h:
+/usr/include/c++/10/cstdio:
 
-/usr/include/c++/10/bits/stl_pair.h:
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/logger.h:
 
-/usr/include/c++/10/bits/atomic_base.h:
+/usr/lib/gcc/x86_64-linux-gnu/10/include/stddef.h:
 
-/usr/include/c++/10/bits/uses_allocator.h:
+/usr/include/c++/10/bits/atomic_lockfree_defines.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/10/include/stdint.h:
+/usr/include/x86_64-linux-gnu/c++/10/bits/atomic_word.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
@@ -635,6 +629,8 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 /usr/include/c++/10/bits/shared_ptr.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/circular_q.h:
 
 /usr/include/c++/10/ratio:
 
@@ -646,6 +642,10 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
+/usr/include/locale.h:
+
+/usr/include/c++/10/ext/numeric_traits.h:
+
 /usr/include/c++/10/ext/new_allocator.h:
 
 /usr/include/c++/10/bits/stl_tempbuf.h:
@@ -655,10 +655,6 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 /usr/include/c++/10/bits/exception_ptr.h:
 
 /usr/include/wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
@@ -674,19 +670,21 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/c++/10/bits/ranges_algobase.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/10/include/stddef.h:
-
-/usr/include/c++/10/bits/atomic_lockfree_defines.h:
-
-/usr/include/x86_64-linux-gnu/c++/10/bits/atomic_word.h:
-
 /usr/include/c++/10/limits:
+
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/spdlog.h:
 
 /usr/include/c++/10/streambuf:
 
 /usr/include/stdio.h:
 
 /usr/include/c++/10/bits/move.h:
+
+/usr/include/string.h:
+
+/usr/include/c++/10/unordered_map:
+
+/usr/include/c++/10/type_traits:
 
 /usr/include/c++/10/bits/stl_relops.h:
 
@@ -708,11 +706,7 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/log_msg_buffer.h:
-
 /usr/include/c++/10/bits/range_access.h:
-
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/fmt/format.h:
 
 /usr/include/c++/10/debug/debug.h:
 
@@ -740,6 +734,8 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/c++/10/iterator:
 
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/log_msg.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/c++/10/iosfwd:
@@ -750,17 +746,21 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/c++/10/cwchar:
 
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/fmt/fmt.h:
+
 /usr/include/c++/10/bits/char_traits.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stdarg.h:
-
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/details/synchronous_factory.h:
 
 /usr/include/sched.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
@@ -774,8 +774,6 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/x86_64-linux-gnu/c++/10/bits/c++locale.h:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/formatter.h:
-
 /usr/include/c++/10/bits/locale_facets.tcc:
 
 /usr/include/c++/10/bits/stl_heap.h:
@@ -783,10 +781,6 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 /usr/include/endian.h:
 
 /usr/include/c++/10/clocale:
-
-/usr/include/c++/10/ext/numeric_traits.h:
-
-/usr/include/locale.h:
 
 /usr/include/c++/10/ctime:
 
@@ -822,13 +816,19 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/common.h:
+
 /usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/thread_pool.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
 /usr/include/c++/10/cwctype:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/spdlog/details/os.h:
 
 /usr/include/c++/10/bits/locale_classes.h:
 
@@ -842,7 +842,7 @@ source/log/CMakeFiles/zatestil-bot.log.dir/log.cpp.o: /home/aalisher/CLionProjec
 
 /usr/include/c++/10/bits/cxxabi_forced.h:
 
-/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include/spdlog/version.h:
+/home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/include/fmt/core.h:
 
 /usr/include/c++/10/bits/stl_function.h:
 

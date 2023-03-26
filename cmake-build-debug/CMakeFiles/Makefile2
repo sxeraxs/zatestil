@@ -185,6 +185,7 @@ test/clean: test/CMakeFiles/zatestil-bot.test.dir/clean
 # Recursive "all" directory target.
 third/all: third/boost/all
 third/all: third/gtest/all
+third/all: third/sfe/all
 third/all: third/spdlog/all
 third/all: third/tgbot/all
 .PHONY : third/all
@@ -192,6 +193,7 @@ third/all: third/tgbot/all
 # Recursive "preinstall" directory target.
 third/preinstall: third/boost/preinstall
 third/preinstall: third/gtest/preinstall
+third/preinstall: third/sfe/preinstall
 third/preinstall: third/spdlog/preinstall
 third/preinstall: third/tgbot/preinstall
 .PHONY : third/preinstall
@@ -199,6 +201,7 @@ third/preinstall: third/tgbot/preinstall
 # Recursive "clean" directory target.
 third/clean: third/boost/clean
 third/clean: third/gtest/clean
+third/clean: third/sfe/clean
 third/clean: third/spdlog/clean
 third/clean: third/tgbot/clean
 .PHONY : third/clean
@@ -232,6 +235,21 @@ third/gtest/preinstall:
 # Recursive "clean" directory target.
 third/gtest/clean:
 .PHONY : third/gtest/clean
+
+#=============================================================================
+# Directory level rules for directory third/sfe
+
+# Recursive "all" directory target.
+third/sfe/all: third/sfe/CMakeFiles/sfe.dir/all
+.PHONY : third/sfe/all
+
+# Recursive "preinstall" directory target.
+third/sfe/preinstall:
+.PHONY : third/sfe/preinstall
+
+# Recursive "clean" directory target.
+third/sfe/clean: third/sfe/CMakeFiles/sfe.dir/clean
+.PHONY : third/sfe/clean
 
 #=============================================================================
 # Directory level rules for directory third/spdlog
@@ -279,6 +297,32 @@ third/tgbot/tgbot-cpp/clean: third/tgbot/tgbot-cpp/CMakeFiles/TgBot.dir/clean
 .PHONY : third/tgbot/tgbot-cpp/clean
 
 #=============================================================================
+# Target rules for target third/sfe/CMakeFiles/sfe.dir
+
+# All Build rule for target.
+third/sfe/CMakeFiles/sfe.dir/all:
+	$(MAKE) $(MAKESILENT) -f third/sfe/CMakeFiles/sfe.dir/build.make third/sfe/CMakeFiles/sfe.dir/depend
+	$(MAKE) $(MAKESILENT) -f third/sfe/CMakeFiles/sfe.dir/build.make third/sfe/CMakeFiles/sfe.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=22,23 "Built target sfe"
+.PHONY : third/sfe/CMakeFiles/sfe.dir/all
+
+# Build rule for subdir invocation for target.
+third/sfe/CMakeFiles/sfe.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third/sfe/CMakeFiles/sfe.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles 0
+.PHONY : third/sfe/CMakeFiles/sfe.dir/rule
+
+# Convenience name for target.
+sfe: third/sfe/CMakeFiles/sfe.dir/rule
+.PHONY : sfe
+
+# clean rule for target.
+third/sfe/CMakeFiles/sfe.dir/clean:
+	$(MAKE) $(MAKESILENT) -f third/sfe/CMakeFiles/sfe.dir/build.make third/sfe/CMakeFiles/sfe.dir/clean
+.PHONY : third/sfe/CMakeFiles/sfe.dir/clean
+
+#=============================================================================
 # Target rules for target third/tgbot/tgbot-cpp/CMakeFiles/TgBot.dir
 
 # All Build rule for target.
@@ -311,7 +355,7 @@ third/tgbot/tgbot-cpp/CMakeFiles/TgBot.dir/clean:
 source/config/CMakeFiles/zatestil-bot.config.dir/all:
 	$(MAKE) $(MAKESILENT) -f source/config/CMakeFiles/zatestil-bot.config.dir/build.make source/config/CMakeFiles/zatestil-bot.config.dir/depend
 	$(MAKE) $(MAKESILENT) -f source/config/CMakeFiles/zatestil-bot.config.dir/build.make source/config/CMakeFiles/zatestil-bot.config.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=25,26 "Built target zatestil-bot.config"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=27,28 "Built target zatestil-bot.config"
 .PHONY : source/config/CMakeFiles/zatestil-bot.config.dir/all
 
 # Build rule for subdir invocation for target.
@@ -337,7 +381,7 @@ source/config/CMakeFiles/zatestil-bot.config.dir/clean:
 source/log/CMakeFiles/zatestil-bot.log.dir/all:
 	$(MAKE) $(MAKESILENT) -f source/log/CMakeFiles/zatestil-bot.log.dir/build.make source/log/CMakeFiles/zatestil-bot.log.dir/depend
 	$(MAKE) $(MAKESILENT) -f source/log/CMakeFiles/zatestil-bot.log.dir/build.make source/log/CMakeFiles/zatestil-bot.log.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=27,28 "Built target zatestil-bot.log"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=29,30 "Built target zatestil-bot.log"
 .PHONY : source/log/CMakeFiles/zatestil-bot.log.dir/all
 
 # Build rule for subdir invocation for target.
@@ -360,15 +404,16 @@ source/log/CMakeFiles/zatestil-bot.log.dir/clean:
 # Target rules for target source/util/CMakeFiles/zatestil-bot.util.dir
 
 # All Build rule for target.
-source/util/CMakeFiles/zatestil-bot.util.dir/all:
+source/util/CMakeFiles/zatestil-bot.util.dir/all: third/sfe/CMakeFiles/sfe.dir/all
+source/util/CMakeFiles/zatestil-bot.util.dir/all: source/log/CMakeFiles/zatestil-bot.log.dir/all
 	$(MAKE) $(MAKESILENT) -f source/util/CMakeFiles/zatestil-bot.util.dir/build.make source/util/CMakeFiles/zatestil-bot.util.dir/depend
 	$(MAKE) $(MAKESILENT) -f source/util/CMakeFiles/zatestil-bot.util.dir/build.make source/util/CMakeFiles/zatestil-bot.util.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=31,32,33 "Built target zatestil-bot.util"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=33,34,35,36,37,38 "Built target zatestil-bot.util"
 .PHONY : source/util/CMakeFiles/zatestil-bot.util.dir/all
 
 # Build rule for subdir invocation for target.
 source/util/CMakeFiles/zatestil-bot.util.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/util/CMakeFiles/zatestil-bot.util.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles 0
 .PHONY : source/util/CMakeFiles/zatestil-bot.util.dir/rule
@@ -389,7 +434,7 @@ source/util/CMakeFiles/zatestil-bot.util.dir/clean:
 test/CMakeFiles/zatestil-bot.test.dir/all:
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/zatestil-bot.test.dir/build.make test/CMakeFiles/zatestil-bot.test.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/zatestil-bot.test.dir/build.make test/CMakeFiles/zatestil-bot.test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=29,30 "Built target zatestil-bot.test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=31,32 "Built target zatestil-bot.test"
 .PHONY : test/CMakeFiles/zatestil-bot.test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -412,18 +457,19 @@ test/CMakeFiles/zatestil-bot.test.dir/clean:
 # Target rules for target application/CMakeFiles/zatestil-bot.dir
 
 # All Build rule for target.
+application/CMakeFiles/zatestil-bot.dir/all: third/sfe/CMakeFiles/sfe.dir/all
 application/CMakeFiles/zatestil-bot.dir/all: third/tgbot/tgbot-cpp/CMakeFiles/TgBot.dir/all
 application/CMakeFiles/zatestil-bot.dir/all: source/config/CMakeFiles/zatestil-bot.config.dir/all
 application/CMakeFiles/zatestil-bot.dir/all: source/log/CMakeFiles/zatestil-bot.log.dir/all
 application/CMakeFiles/zatestil-bot.dir/all: source/util/CMakeFiles/zatestil-bot.util.dir/all
 	$(MAKE) $(MAKESILENT) -f application/CMakeFiles/zatestil-bot.dir/build.make application/CMakeFiles/zatestil-bot.dir/depend
 	$(MAKE) $(MAKESILENT) -f application/CMakeFiles/zatestil-bot.dir/build.make application/CMakeFiles/zatestil-bot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=22,23,24 "Built target zatestil-bot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=24,25,26 "Built target zatestil-bot"
 .PHONY : application/CMakeFiles/zatestil-bot.dir/all
 
 # Build rule for subdir invocation for target.
 application/CMakeFiles/zatestil-bot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles 36
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 application/CMakeFiles/zatestil-bot.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles 0
 .PHONY : application/CMakeFiles/zatestil-bot.dir/rule

@@ -1,3 +1,6 @@
 [submodule "third/tgbot-cpp"]
 	path = third/tgbot/tgbot-cpp
 	url = https://github.com/reo7sp/tgbot-cpp
+[submodule "third/sfe/sfe"]
+	path = third/sfe/sfe
+	url = https://github.com/axolm/libsfe.git

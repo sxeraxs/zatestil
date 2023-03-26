@@ -111,13 +111,20 @@ application/zatestil-bot: application/CMakeFiles/zatestil-bot.dir/build.make
 application/zatestil-bot: source/config/libzatestil-bot.config.a
 application/zatestil-bot: source/log/libzatestil-bot.log.a
 application/zatestil-bot: source/util/libzatestil-bot.util.a
+application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_system-mt-d-x64.a
+application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_program_options-mt-d-x64.a
+application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_thread-mt-d-x64.a
+application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_context-mt-d-x64.a
+application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_coroutine-mt-d-x64.a
 application/zatestil-bot: third/tgbot/tgbot-cpp/libTgBotd.a
-application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libspdlogd.a
-application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libfmtd.a
-application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libzd.a
-application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libssl.a
-application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libcrypto.a
-application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libboost_system-mt-d-x64.a
+application/zatestil-bot: source/log/libzatestil-bot.log.a
+application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libspdlogd.a
+application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libfmtd.a
+application/zatestil-bot: third/sfe/libsfed.a
+application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libzd.a
+application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libssl.a
+application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libcrypto.a
+application/zatestil-bot: /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libboost_system-mt-d-x64.a
 application/zatestil-bot: application/CMakeFiles/zatestil-bot.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable zatestil-bot"
 	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/application && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/zatestil-bot.dir/link.txt --verbose=$(VERBOSE)

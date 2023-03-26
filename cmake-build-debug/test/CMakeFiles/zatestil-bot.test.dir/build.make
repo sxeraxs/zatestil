@@ -92,8 +92,8 @@ zatestil__bot_test_EXTERNAL_OBJECTS =
 
 test/zatestil-bot.test: test/CMakeFiles/zatestil-bot.test.dir/sample.cpp.o
 test/zatestil-bot.test: test/CMakeFiles/zatestil-bot.test.dir/build.make
-test/zatestil-bot.test: /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libgtest_maind.a
-test/zatestil-bot.test: /home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/libgtestd.a
+test/zatestil-bot.test: /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libgtest_maind.a
+test/zatestil-bot.test: /home/aalisher/.hunter/_Base/17fd3b9/4162dcb/f96017a/Install/lib/libgtestd.a
 test/zatestil-bot.test: test/CMakeFiles/zatestil-bot.test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable zatestil-bot.test"
 	cd /home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/zatestil-bot.test.dir/link.txt --verbose=$(VERBOSE)
