@@ -1,0 +1,16 @@
+set(Boost_USE_STATIC_LIBS ON)
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    set(Boost_USE_DEBUG_LIBS OFF)  # ignore debug libs and
+    set(Boost_USE_RELEASE_LIBS ON)  # only find release libs
+elseif (CMAKE_BUILD_TYPE STREQUAL "Debug")
+    set(Boost_USE_DEBUG_LIBS ON)  # ignore release libs and
+    set(Boost_USE_RELEASE_LIBS OFF)  # only find debug libs
+endif ()
+
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME OFF)
+set(Boost_NO_BOOST_CMAKE ON)
+set(BOOST_LIBRARIES)
+list(APPEND BOOST_COMPONENTS system program_options thread context coroutine)
+message(STATUS "BOOST_COMPONENTS ${BOOST_COMPONENTS}")
+hunter_add_package(Boost COMPONENTS ${BOOST_COMPONENTS} stacktrace)

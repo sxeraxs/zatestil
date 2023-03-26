@@ -1,0 +1,7 @@
+hunter_add_package(ZLIB)
+hunter_add_package(CURL)
+add_subdirectory(tgbot-cpp)
+add_library(tgbot ALIAS TgBot)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/tgbot-cpp/include)
+set(TGBOT_LIBRARIES "" CACHE INTERNAL "TgBot libraries")
+list(APPEND TGBOT_LIBRARIES  ${CURL_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${OPENSSL_LIBRARIES})

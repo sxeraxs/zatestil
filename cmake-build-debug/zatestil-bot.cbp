@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="zatestil-bot"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\third\;CMake Files\third\tgbot\;CMake Files\third\tgbot\tgbot-cpp\;CMake Files\third\boost\;CMake Files\third\gtest\;CMake Files\third\spdlog\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\.hunter\;CMake Files\..\..\.hunter\_Base\;CMake Files\..\..\.hunter\_Base\Download\;CMake Files\..\..\.hunter\_Base\Download\Hunter\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\find\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\configs\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\system\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\program_options\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\thread\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\context\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\coroutine\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\stacktrace\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\GTest\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\spdlog\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\ZLIB\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\CURL\;CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\scripts\;CMake Files\..\..\.hunter\_Base\17fd3b9\;CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\;CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\;CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\;CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\;CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\;CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\ZLIB\;CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\CURL\;CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\intsizeof\;CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\Boost\;CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\GTest\;CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\spdlog\;CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\fmt\;CMake Files\cmake\;CMake Files\cmake\Hunter\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_3rdParty\;CMake Files\cmake-build-debug\_3rdParty\Hunter\;CMake Files\cmake-build-debug\_3rdParty\Hunter\toolchain\;CMake Files\cmake-build-debug\_3rdParty\Hunter\config-id\;CMake Files\source\;CMake Files\source\config\;CMake Files\source\log\;CMake Files\source\util\;CMake Files\test\;CMake Files\application\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TgBot">
+				<Option output="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/tgbot/tgbot-cpp/libTgBotd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/tgbot/tgbot-cpp"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DHAVE_CURL"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include"/>
+					<Add directory="/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/tgbot/tgbot-cpp/Makefile&quot;  VERBOSE=1 TgBot"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/tgbot/tgbot-cpp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/tgbot/tgbot-cpp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/tgbot/tgbot-cpp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TgBot/fast">
+				<Option output="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/tgbot/tgbot-cpp/libTgBotd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/tgbot/tgbot-cpp"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DHAVE_CURL"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include"/>
+					<Add directory="/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/tgbot/tgbot-cpp/Makefile&quot;  VERBOSE=1 TgBot/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/tgbot/tgbot-cpp/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/tgbot/tgbot-cpp/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/third/tgbot/tgbot-cpp/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zatestil-bot.config">
+				<Option output="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/config/libzatestil-bot.config.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/config"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/include"/>
+					<Add directory="/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/config/Makefile&quot;  VERBOSE=1 zatestil-bot.config"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/config/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/config/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/config/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zatestil-bot.config/fast">
+				<Option output="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/config/libzatestil-bot.config.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/config"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/include"/>
+					<Add directory="/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/config/Makefile&quot;  VERBOSE=1 zatestil-bot.config/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/config/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/config/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/config/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zatestil-bot.log">
+				<Option output="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/log/libzatestil-bot.log.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/log"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add option="-DSPDLOG_FMT_EXTERNAL"/>
+					<Add option="-DFMT_LOCALE"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/include"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include"/>
+					<Add directory="/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/log/Makefile&quot;  VERBOSE=1 zatestil-bot.log"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/log/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/log/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/log/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zatestil-bot.log/fast">
+				<Option output="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/log/libzatestil-bot.log.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/log"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add option="-DSPDLOG_FMT_EXTERNAL"/>
+					<Add option="-DFMT_LOCALE"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/include"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include"/>
+					<Add directory="/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/log/Makefile&quot;  VERBOSE=1 zatestil-bot.log/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/log/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/log/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/log/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zatestil-bot.util">
+				<Option output="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util/libzatestil-bot.util.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/include"/>
+					<Add directory="/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util/Makefile&quot;  VERBOSE=1 zatestil-bot.util"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zatestil-bot.util/fast">
+				<Option output="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util/libzatestil-bot.util.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/include"/>
+					<Add directory="/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util/Makefile&quot;  VERBOSE=1 zatestil-bot.util/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/source/util/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zatestil-bot.test">
+				<Option output="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/test/zatestil-bot.test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/include"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include"/>
+					<Add directory="/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 zatestil-bot.test"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zatestil-bot.test/fast">
+				<Option output="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/test/zatestil-bot.test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/include"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include"/>
+					<Add directory="/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 zatestil-bot.test/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zatestil-bot">
+				<Option output="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/application/zatestil-bot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/application"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add option="-DSPDLOG_FMT_EXTERNAL"/>
+					<Add option="-DFMT_LOCALE"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/include"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include"/>
+					<Add directory="/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/application/Makefile&quot;  VERBOSE=1 zatestil-bot"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zatestil-bot/fast">
+				<Option output="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/application/zatestil-bot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/application"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add option="-DSPDLOG_FMT_EXTERNAL"/>
+					<Add option="-DFMT_LOCALE"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/include"/>
+					<Add directory="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/include"/>
+					<Add directory="/home/aalisher/.hunter/_Base/17fd3b9/585c03e/f96017a/Install/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/application/Makefile&quot;  VERBOSE=1 zatestil-bot/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/application/Application.cpp">
+			<Option target="zatestil-bot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/application/Application.hpp">
+			<Option target="zatestil-bot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/application/main.cpp">
+			<Option target="zatestil-bot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/source/config/Configuration.cpp">
+			<Option target="zatestil-bot.config"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/source/log/log.cpp">
+			<Option target="zatestil-bot.log"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/source/util/OnScopeExit.cpp">
+			<Option target="zatestil-bot.util"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/source/util/Singleton.cpp">
+			<Option target="zatestil-bot.util"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/test/sample.cpp">
+			<Option target="zatestil-bot.test"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/test/sample.hpp">
+			<Option target="zatestil-bot.test"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/Api.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/Bot.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/EventHandler.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/TgException.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/TgTypeParser.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/net/BoostHttpOnlySslClient.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/net/CurlHttpClient.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/net/HttpParser.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/net/TgLongPoll.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/net/Url.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/tools/FileTools.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/tools/StringTools.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/types/BotCommandScope.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/types/ChatMember.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/types/InlineQueryResult.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/types/InputFile.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/types/InputMedia.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/types/InputMessageContent.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/types/MenuButton.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/src/types/PassportElementError.cpp">
+			<Option target="TgBot"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\third\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\third\tgbot\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/tgbot/tgbot-cpp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\third\tgbot\tgbot-cpp\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/boost/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\third\boost\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/gtest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\third\gtest\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/third/spdlog/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\third\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/Hunter">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/find/FindBoost.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\find\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/find/FindOpenSSL.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\find\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/find/FindZLIB.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\find\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_add_package.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_add_version.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_apply_copy_rules.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_assert_empty_string.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_assert_not_empty_string.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_cache_run.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_cache_server_password.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_cacheable.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_calculate_self.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_check_download_error_message.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_check_flush_needed.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_check_toolchain_definition.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_cmake_args.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_config.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_create_args_file.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_create_cache_file.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_create_cache_meta_directory.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_create_dependency_entry.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_create_deps_info.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_default_version.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_download.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_download_cache_meta_file.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_download_cache_raw_file.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_download_server_url.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_error_page.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_fatal_error.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_final_config.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_finalize.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_find_licenses.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_find_stamps.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_flush_cache_variables.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_get_cacheable.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_get_cmake_args.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_get_configuration_types.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_get_git_executable.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_get_keep_package_sources.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_get_package_deps.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_get_package_deps_recurse.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_get_package_sha1.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_get_package_url.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_get_passwords_path.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_get_project_files_to_load.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_get_source_subdir.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_http_password.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_init_not_found_counter.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_initialize.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_internal_error.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_jobs_number.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_load_from_cache.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_lock_directory.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_make_directory.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_pack_directory.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_pack_git_self.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_pack_git_submodule.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_parse_cmake_args_for_keyword.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_patch_unrelocatable_text_files.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_pick_scheme.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_print_cmd.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_private_data.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_private_data_password.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_read_http_credentials.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_register_dependency.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_sanity_checks.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_save_to_cache.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_set_config_location.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_sleep_before_download.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_status_debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_status_print.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_step_into_unpacked_directory.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_unpack_directory.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_unsetvar.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_upload_cache.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_upload_password.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_upload_single_file.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_upload_to_custom_server.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/modules/hunter_user_error.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\modules\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/configs/default.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\configs\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/projects/Boost/hunter.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/projects/Boost/system/hunter.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\system\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/projects/Boost/program_options/hunter.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\program_options\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/projects/Boost/thread/hunter.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\thread\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/projects/Boost/context/hunter.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\context\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/projects/Boost/coroutine/hunter.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\coroutine\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/projects/Boost/stacktrace/hunter.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\Boost\stacktrace\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/projects/GTest/hunter.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\GTest\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/projects/spdlog/hunter.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/projects/ZLIB/hunter.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\ZLIB\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/cmake/projects/CURL/hunter.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\cmake\projects\CURL\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/Download/Hunter/0.24.2/17fd3b9/Unpacked/scripts/create-toolchain-info.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\Download\Hunter\0.24.2\17fd3b9\Unpacked\scripts\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/config.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/ZLIB/ZLIBConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\ZLIB\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/ZLIB/ZLIBConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\ZLIB\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/ZLIB/ZLIBTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\ZLIB\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/ZLIB/ZLIBTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\ZLIB\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/ZLIB/ZLIBTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\ZLIB\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/CURL/CURLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\CURL\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/CURL/CURLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\CURL\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/CURL/CURLTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\CURL\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/CURL/CURLTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\CURL\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/CURL/CURLTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\CURL\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/intsizeof/intsizeofConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\intsizeof\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/intsizeof/intsizeofTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\intsizeof\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/Boost/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\Boost\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/Boost/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\Boost\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/GTest/GTestConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\GTest\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/GTest/GTestConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\GTest\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/GTest/GTestTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\GTest\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/GTest/GTestTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\GTest\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/GTest/GTestTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\GTest\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/spdlog/spdlogConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/spdlog/spdlogConfigTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/spdlog/spdlogConfigTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/spdlog/spdlogConfigTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/spdlog/spdlogConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/fmt/fmt-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/fmt/fmt-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/fmt/fmt-targets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/fmt/fmt-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/../../.hunter/_Base/17fd3b9/585c03e/f96017a/Install/lib/cmake/fmt/fmt-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\.hunter\_Base\17fd3b9\585c03e\f96017a\Install\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/cmake/HunterGate.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/cmake/module.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/cmake/Hunter/config.cmake">
+			<Option virtualFolder="CMake Files\cmake\Hunter\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/_3rdParty/Hunter/toolchain/toolchain.info.NOLF">
+			<Option virtualFolder="CMake Files\cmake-build-debug\_3rdParty\Hunter\toolchain\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug/_3rdParty/Hunter/config-id/config.cmake.NOLF">
+			<Option virtualFolder="CMake Files\cmake-build-debug\_3rdParty\Hunter\config-id\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/source/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\source\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/source/config/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\source\config\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/source/log/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\source\log\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/source/util/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\source\util\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+		<Unit filename="/home/aalisher/CLionProjects/zatestil-bot/application/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\application\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

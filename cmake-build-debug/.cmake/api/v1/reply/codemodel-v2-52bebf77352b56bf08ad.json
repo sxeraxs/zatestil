@@ -1,0 +1,306 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						7,
+						11,
+						12
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "third",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-third-Debug-611e2c8ccfa35f121224.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "third"
+				},
+				{
+					"build" : "third/boost",
+					"jsonFile" : "directory-third.boost-Debug-8268cb40b1b0b4eb537d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "third/boost"
+				},
+				{
+					"build" : "third/gtest",
+					"jsonFile" : "directory-third.gtest-Debug-8dba28758afd3a387c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "third/gtest"
+				},
+				{
+					"build" : "third/spdlog",
+					"jsonFile" : "directory-third.spdlog-Debug-e3bc4cbfc9952308c5f3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "third/spdlog"
+				},
+				{
+					"build" : "third/tgbot",
+					"childIndexes" : 
+					[
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-third.tgbot-Debug-0923d9ccd8ac1d071cea.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "third/tgbot"
+				},
+				{
+					"build" : "third/tgbot/tgbot-cpp",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-third.tgbot.tgbot-cpp-Debug-6ee5cee897047f4c7a94.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "third/tgbot/tgbot-cpp",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "source",
+					"childIndexes" : 
+					[
+						8,
+						9,
+						10
+					],
+					"jsonFile" : "directory-source-Debug-5b5a50b02d94cdb5eb2c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "source"
+				},
+				{
+					"build" : "source/config",
+					"jsonFile" : "directory-source.config-Debug-453c277806f6e8b70449.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 0,
+					"source" : "source/config",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "source/log",
+					"jsonFile" : "directory-source.log-Debug-ac3a3fcc5f3fabd3a502.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 0,
+					"source" : "source/log",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "source/util",
+					"jsonFile" : "directory-source.util-Debug-d6596dc27c7bfe3e392e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 0,
+					"source" : "source/util",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "test",
+					"jsonFile" : "directory-test-Debug-451c0598f41488bb20b9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "application",
+					"jsonFile" : "directory-application-Debug-6e656b1e6c420a64236a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "application",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"name" : "zatestil-bot",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "TgBot",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 6,
+					"id" : "TgBot::@8d3b3ae5f74371b683b9",
+					"jsonFile" : "target-TgBot-Debug-74c00a9a4e5bfcaeb736.json",
+					"name" : "TgBot",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "zatestil-bot::@8badf0d542dc2e21c899",
+					"jsonFile" : "target-zatestil-bot-Debug-f7b7c7cc35afbcb592ba.json",
+					"name" : "zatestil-bot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "zatestil-bot.config::@c432a02a2701bbcdfd39",
+					"jsonFile" : "target-zatestil-bot.config-Debug-ae34876f258170ee84d9.json",
+					"name" : "zatestil-bot.config",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "zatestil-bot.log::@ad8c10e37bf5a45c8bba",
+					"jsonFile" : "target-zatestil-bot.log-Debug-cf03953dbd457348b37a.json",
+					"name" : "zatestil-bot.log",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "zatestil-bot.test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-zatestil-bot.test-Debug-dc58d0aee93ca0773060.json",
+					"name" : "zatestil-bot.test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "zatestil-bot.util::@abfa48c96b3eff989354",
+					"jsonFile" : "target-zatestil-bot.util-Debug-21f8e302c4baf200bf6e.json",
+					"name" : "zatestil-bot.util",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/aalisher/CLionProjects/zatestil-bot/cmake-build-debug",
+		"source" : "/home/aalisher/CLionProjects/zatestil-bot"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
