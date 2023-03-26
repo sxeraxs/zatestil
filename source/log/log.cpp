@@ -6,7 +6,7 @@
 
 #include <log/log.hpp>
 
-namespace ztsl {
+namespace ztstl {
 namespace log {
 
     void initialize(std::string const& name) {
@@ -32,4 +32,4 @@ namespace log {
     }
 
 }// namespace log
-}// namespace ztsl
+}// namespace ztstl

@@ -6,41 +6,40 @@
 #include <string>
 
 #include <util/Singleton.hpp>
-namespace ztsl {
-namespace config {
 
-    enum Param { Token, Name };
+namespace ztstl::config {
 
-    class Configuration : public util::Singleton<Configuration> {
-       public:
-        Configuration(Configuration&&) = delete;
-        Configuration(Configuration const&) = delete;
-        Configuration& operator=(Configuration&&) = delete;
-        Configuration& operator=(Configuration const&) = delete;
+enum Param { Token, Name };
 
-        ~Configuration() noexcept = default;
+class Configuration : public util::Singleton<Configuration> {
+   public:
+    Configuration(Configuration&&) = delete;
+    Configuration(Configuration const&) = delete;
+    Configuration& operator=(Configuration&&) = delete;
+    Configuration& operator=(Configuration const&) = delete;
 
-       public:
-        Configuration() = default;
+    ~Configuration() noexcept = default;
 
-        template <Param param>
-        std::string get() const noexcept {
-            if constexpr (param == Token) {
-                return getToken();
-            }
-            if constexpr (param == Name) {
-                return getName();
-            }
+   public:
+    Configuration() = default;
+
+    template <Param param>
+    [[nodiscard]] std::string get() const noexcept {
+        if constexpr (param == Token) {
+            return getToken();
         }
+        if constexpr (param == Name) {
+            return getName();
+        }
+    }
 
-       private:
-        virtual std::string getName() const noexcept {
-            return "ztsl";
-        };
-
-        virtual std::string getToken() const noexcept {
-            return R"(6011320582:AAG55SmzWEJApUneCqWt9afjOb2XDDVdxbQ)";
-        };
+   private:
+    [[nodiscard]] virtual std::string getName() const noexcept {
+        return "ztstl";
     };
-}// namespace config
-}// namespace ztsl
+
+    [[nodiscard]] virtual std::string getToken() const noexcept {
+        return R"(6011320582:AAG55SmzWEJApUneCqWt9afjOb2XDDVdxbQ)";
+    };
+};
+}// namespace ztstl::config

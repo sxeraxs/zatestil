@@ -1,0 +1,8 @@
+if (CMAKE_BUILD_TYPE STREQUAL "Debug" AND UNIX)
+    add_compile_options("-g")
+    if (NOT MSVC)
+        add_compile_options("-Wall" "-Wextra" "-Wpedantic" "-Werror")
+    endif ()
+    include_directories(sfe/include)
+    add_library(sfe STATIC sfe/src/sfe/sfe_preload.cpp)
+endif ()

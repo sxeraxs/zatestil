@@ -1,2 +1,0 @@
-/usr/bin/ar qc libzatestil-bot.config.a "CMakeFiles/zatestil-bot.config.dir/Configuration.cpp.o"
-/usr/bin/ranlib libzatestil-bot.config.a
