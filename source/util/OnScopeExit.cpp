@@ -9,7 +9,9 @@ namespace ztstl::util {
 OnScopeExit::OnScopeExit(std::function<void()> func) : m_function {std::move(func)} {}
 
 OnScopeExit::~OnScopeExit() {
-    m_function();
+    try {
+        m_function();
+    } catch (...) {}
 }
 
 }// namespace ztstl::util

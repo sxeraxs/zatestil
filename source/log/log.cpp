@@ -6,8 +6,7 @@
 
 #include <log/log.hpp>
 
-namespace ztstl {
-namespace log {
+namespace ztstl::log {
 
     void initialize(std::string const& name) {
         spdlog::init_thread_pool(8192, 1);
@@ -31,5 +30,4 @@ namespace log {
         spdlog::drop_all();
     }
 
-}// namespace log
 }// namespace ztstl

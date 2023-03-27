@@ -5,8 +5,7 @@
 
 #include <spdlog/spdlog.h>
 
-namespace ztstl {
-namespace log {
+namespace ztstl::log {
 
     void initialize(std::string const& name);
 
@@ -37,5 +36,4 @@ namespace log {
 
     void uninitialize();
 
-}// namespace log
 }// namespace ztstl

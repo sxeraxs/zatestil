@@ -54,6 +54,10 @@ void Application::run() {
             }
         } catch (TgBot::TgException const& ex) {
             log::error("{} {}", ex.what(), util::current_exception_stacktrace_as_string());
+        } catch (std::exception const& ex) {
+            log::error("{} {}", ex.what(), util::current_exception_stacktrace_as_string());
+        } catch (...) {
+            log::error("unknown error {}", util::current_exception_stacktrace_as_string());
         }
     });
 }
