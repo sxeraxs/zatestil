@@ -5,8 +5,6 @@
 #pragma once
 #include "tgbot/tgbot.h"
 
-#include <boost/asio.hpp>
-
 #include "config/BotConfiguration.hpp"
 
 #include "../Application.hpp"
