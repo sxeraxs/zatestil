@@ -4,3 +4,9 @@
 [submodule "third/sfe/sfe"]
 	path = third/sfe/sfe
 	url = https://github.com/axolm/libsfe.git
+[submodule "third/yas/yas"]
+	path = third/yas/yas
+	url = https://github.com/niXman/yas.git
+[submodule "third/mdbx/mdbx"]
+	path = third/mdbx/mdbx
+	url = https://gitflic.ru/project/erthink/libmdbx.git

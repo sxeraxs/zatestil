@@ -20,7 +20,7 @@ void run(boost::asio::io_context& context) {
 }
 
 ThreadPool::ThreadPool(ThreadPool::Context& context, size_t nThreads) : m_context {context} {
-    nThreads = std::max(nThreads, static_cast<size_t>(2 * std::thread::hardware_concurrency()));
+    nThreads = std::max(nThreads, static_cast<size_t>(std::thread::hardware_concurrency()));
 
     m_threads.reserve(nThreads);
 
