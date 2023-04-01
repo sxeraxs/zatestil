@@ -30,6 +30,10 @@ macro(application)
         set(APPLICATION_TYPE EXECUTABLE)
     endif ()
 
+    if (NOT DEFINED APPLICATION_OUTPUT_DIRECTORY)
+        set(APPLICATION_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+    endif()
+
     directories_files(${CMAKE_CURRENT_SOURCE_DIR} FILES)
 
     if ("${APPLICATION_TYPE}" STREQUAL "SHARED" OR "${APPLICATION_TYPE}" STREQUAL "shared")
@@ -37,7 +41,7 @@ macro(application)
         add_library(${APPLICATION_NAME} SHARED ${FILES})
 
         set_target_properties(${APPLICATION_NAME} PROPERTIES
-                LIBRARY_OUTPUT_DIRECTORY "${OUTPUT_DIRECTORY}"
+                LIBRARY_OUTPUT_DIRECTORY "${APPLICATION_OUTPUT_DIRECTORY}"
                 DEBUG_POSTFIX ""
                 )
     elseif ("${APPLICATION_TYPE}" STREQUAL "STATIC" OR "${APPLICATION_TYPE}" STREQUAL "static")
@@ -45,7 +49,7 @@ macro(application)
         add_library(${APPLICATION_NAME} STATIC ${FILES})
 
         set_target_properties(${APPLICATION_NAME} PROPERTIES
-                ARCHIVE_OUTPUT_DIRECTORY "${OUTPUT_DIRECTORY}"
+                ARCHIVE_OUTPUT_DIRECTORY "${APPLICATION_OUTPUT_DIRECTORY}"
                 DEBUG_POSTFIX ""
                 )
     else ()
@@ -53,7 +57,7 @@ macro(application)
         add_executable(${APPLICATION_NAME} ${FILES})
 
         set_target_properties(${APPLICATION_NAME} PROPERTIES
-                RUNTIME_OUTPUT_DIRECTORY "${OUTPUT_DIRECTORY}"
+                RUNTIME_OUTPUT_DIRECTORY "${APPLICATION_OUTPUT_DIRECTORY}"
                 DEBUG_POSTFIX ""
                 )
 
@@ -81,6 +85,10 @@ macro(module)
         set(MODULE_TYPE STATIC)
     endif ()
 
+    if (NOT DEFINED MODULE_OUTPUT_DIRECTORY)
+        set(MODULE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/module)
+    endif()
+
     set(MODULE_NAME "${PROJECT_NAME}.${MODULE_NAME}")
 
     directories_files(${CMAKE_CURRENT_SOURCE_DIR} FILES)
@@ -90,7 +98,7 @@ macro(module)
         add_library(${MODULE_NAME} SHARED ${FILES})
 
         set_target_properties(${MODULE_NAME} PROPERTIES
-                LIBRARY_OUTPUT_DIRECTORY "${OUTPUT_DIRECTORY}"
+                LIBRARY_OUTPUT_DIRECTORY "${MODULE_OUTPUT_DIRECTORY}"
                 DEBUG_POSTFIX ""
                 )
     else ()
@@ -98,7 +106,7 @@ macro(module)
         add_library(${MODULE_NAME} STATIC ${FILES})
 
         set_target_properties(${MODULE_NAME} PROPERTIES
-                ARCHIVE_OUTPUT_DIRECTORY "${OUTPUT_DIRECTORY}"
+                ARCHIVE_OUTPUT_DIRECTORY "${MODULE_OUTPUT_DIRECTORY}"
                 DEBUG_POSTFIX ""
                 )
     endif ()

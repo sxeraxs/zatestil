@@ -1,20 +1,25 @@
+//
+// Created by aalisher on 3/27/23.
+//
+
+#pragma once
 #include <config/Configuration.hpp>
 #include <log/log.hpp>
 #include <util/OnScopeExit.hpp>
 #include <util/Result.hpp>
 #include <util/stacktrace.hpp>
 
-#include "Application.hpp"
+namespace ztstl {
 
-int main() {
+template <class Application, class Config>
+int run(int, char const**) {
     using namespace ztstl;
     using namespace util;
-    using namespace config;
 
     auto result = Result {Result::Success};
-    auto config = config::Configuration::instance();
+    auto config = Config::instance();
 
-    log::initialize(config->get<Name>());
+    log::initialize(config->template get<config::Name>());
 
     std::set_terminate([]() {
         try {
@@ -41,13 +46,13 @@ int main() {
             }
         }
         log::uninitialize();
-        return result;
     }};
 
     try {
-        log::info("starting as {}", config->get<Name>());
+        log::info("starting as {}", config->template get<config::Name>());
 
-        Application app {config};
+        Context context{};
+        Application app {config, context};
         app.run();
 
     } catch (const std::exception& ex) {
@@ -57,4 +62,7 @@ int main() {
         result.code = Result::Critical;
         result.message = fmt::format("shutting down with error - unknown {}", util::current_exception_stacktrace_as_string());
     }
+
+    return result;
 }
+}// namespace ztstl

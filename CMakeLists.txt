@@ -9,7 +9,7 @@ HunterGate(
         LOCAL
 )
 
-project(zatestil-bot)
+project(zatestil)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -38,12 +38,14 @@ add_subdirectory(third)
 find_package(Threads REQUIRED)
 find_package(GTest CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
+find_package(websocketpp CONFIG REQUIRED)
 
 find_package(Boost REQUIRED CONFIG COMPONENTS ${BOOST_COMPONENTS})
 
 include_directories(include)
 include_directories(${Boost_INCLUDE_DIRS})
 include_directories(third/sfe/sfe/include)
+include_directories(third/yas/yas/include)
 include_directories(third/tgbot/tgbot-cpp/include)
 
 add_subdirectory(source)

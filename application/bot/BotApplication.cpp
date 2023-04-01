@@ -1,33 +1,21 @@
 //
 // Created by aalisher on 3/26/23.
 //
-#include "Application.hpp"
+#include "BotApplication.hpp"
 
-#include <log/log.hpp>
-#include <util/stacktrace.hpp>
+#include "log/log.hpp"
+#include "util/stacktrace.hpp"
 
-namespace ztstl {
+namespace ztstl::bot {
 
-Application::Application(config::Configuration::Ptr config) :
-    m_config {config},
-    m_isRunning {false},
-    m_signalSet {m_context, SIGINT, SIGTERM} {
-    using namespace config;
-    m_signalSet.async_wait([this](auto error, auto signal) {
-        log::debug("got signal {} with error {} message {}", signal, error.value(), error.message());
-
-        if (not error) {
-            m_isRunning = false;
-            m_context.stop();
-        }
-    });
-
-    m_bot = std::make_unique<Bot>(m_config->get<Token>());
+BotApplication::BotApplication(config::BotConfiguration::Ptr config, Context& context) :
+    Application<BotApplication>{context},
+    m_config {config} {
     m_threadPool = std::make_unique<ThreadPool>(m_context);
+    m_bot = std::make_shared<Bot>(m_config->get<config::Token>());
 }
 
-void Application::run() {
-    m_isRunning = true;
+void BotApplication::run_impl() {
     m_bot->getEvents().onCommand("start", [&](Message::Ptr const& msg) {
         m_threadPool->post([this, msg] {
             log::debug("got start command from {} {}", msg->from->id, msg->from->firstName);
@@ -56,9 +44,7 @@ void Application::run() {
             log::error("{} {}", ex.what(), util::current_exception_stacktrace_as_string());
         } catch (std::exception const& ex) {
             log::error("{} {}", ex.what(), util::current_exception_stacktrace_as_string());
-        } catch (...) {
-            log::error("unknown error {}", util::current_exception_stacktrace_as_string());
-        }
+        } catch (...) { log::error("unknown error {}", util::current_exception_stacktrace_as_string()); }
     });
 }
-}// namespace ztstl
+}// namespace ztstl::bot
