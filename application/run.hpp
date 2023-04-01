@@ -51,7 +51,7 @@ int run(int, char const**) {
     try {
         log::info("starting as {}", config->template get<config::Name>());
 
-        Context context{};
+        ztstl::Context context{};
         Application app {config, context};
         app.run();
 
