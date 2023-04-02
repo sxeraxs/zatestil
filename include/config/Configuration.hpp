@@ -9,7 +9,7 @@
 
 namespace ztstl::config {
 
-enum Param { Token, Name };
+enum Param { BotToken, Name, Endpoint, Address, Port, SslCertificate, SslDhParams, SslPrivateKey, SslPassword };
 
 template <class Config>
 class Configuration {
@@ -24,11 +24,25 @@ class Configuration {
    public:
     template <Param param>
     [[nodiscard]] std::string get() const noexcept {
-        auto config = Config::instance();
-        if constexpr (param == Token) {
-            return config->getToken();
+        auto self = static_cast<Config const*>(this);
+        if constexpr (param == BotToken) {
+            return self->getBotToken();
         } else if constexpr (param == Name) {
-            return config->getName();
+            return self->getName();
+        } else if constexpr (param == Endpoint) {
+            return self->getEndpoint();
+        } else if constexpr (param == Port) {
+            return self->getPort();
+        } else if constexpr (param == Address) {
+            return self->getAddress();
+        } else if constexpr (param == SslCertificate) {
+            return self->getSslCertificate();
+        } else if constexpr (param == SslDhParams) {
+            return self->getSslDhParams();
+        } else if constexpr (param == SslPrivateKey) {
+            return self->getSslPrivateKey();
+        } else if constexpr (param == SslPassword) {
+            return self->getSslPassword();
         }
     }
 };

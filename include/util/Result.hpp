@@ -10,25 +10,17 @@ struct Result {
     enum Code : uint8_t { Success = 0, Error = 1, Critical = 2 } code;
     std::string message;
 
-    operator Code() const {
-        return code;
-    }
+    bool isOk() const noexcept;
+
+    operator Code() const noexcept;
 };
 
-bool operator==(Result const& result, Result::Code code) {
-    return result.code == code;
-}
+bool operator==(Result const& result, Result::Code code);
 
-bool operator==(Result::Code code, Result const& result) {
-    return result.code == code;
-}
+bool operator==(Result::Code code, Result const& result);
 
-bool operator!=(Result::Code code, Result const& result) {
-    return result.code != code;
-}
+bool operator!=(Result::Code code, Result const& result);
 
-bool operator!=(Result const& result, Result::Code code) {
-    return result.code != code;
-}
+bool operator!=(Result const& result, Result::Code code);
 
 }// namespace ztstl::util
