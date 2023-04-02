@@ -3,7 +3,6 @@
 //
 
 #pragma once
-#include <concepts>
 
 #include <boost/preprocessor/seq/for_each.hpp>
 #include <boost/preprocessor/variadic/to_seq.hpp>
@@ -59,9 +58,6 @@ DEFINE_HAS_MEMBER(has_serialize, serialize);
 namespace ztstl::serde {
 
 template <class T>
-concept Serializable = has_serialize_v<T>;
-
-template <class T>
 std::string to_binary(T const& value) {
     yas::mem_ostream ostream {};
     yas::binary_oarchive<yas::mem_ostream, yas::binary | yas::no_header> oarchive {ostream};
@@ -74,6 +70,15 @@ template <class T>
 T from_binary(std::string_view const& buffer) {
     T value {};
     yas::mem_istream istream {buffer.data(), buffer.size()};
+    yas::binary_iarchive<yas::mem_istream, yas::binary | yas::no_header> iarchive {istream};
+    iarchive(value);
+    return value;
+}
+
+template <class T>
+T from_binary(uint8_t const* data, size_t size) {
+    T value {};
+    yas::mem_istream istream {data, size};
     yas::binary_iarchive<yas::mem_istream, yas::binary | yas::no_header> iarchive {istream};
     iarchive(value);
     return value;

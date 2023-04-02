@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
         std::abort();
     });
 
-    ::testing::InitGoogleTest(&argc, argv);
+    testing::InitGoogleTest(&argc, argv);
     auto result = RUN_ALL_TESTS();
     log::uninitialize();
 

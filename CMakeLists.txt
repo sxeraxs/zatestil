@@ -42,6 +42,7 @@ find_package(websocketpp CONFIG REQUIRED)
 find_package(Boost REQUIRED CONFIG COMPONENTS ${BOOST_COMPONENTS})
 
 include_directories(include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 include_directories(${Boost_INCLUDE_DIRS})
 include_directories(third/sfe/sfe/include)
 include_directories(third/yas/yas/include)

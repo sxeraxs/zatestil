@@ -5,16 +5,21 @@
 #pragma once
 #include "tgbot/tgbot.h"
 
+#include <websocket/Message.hpp>
+#include <websocket/client/Session.hpp>
+
 #include "config/BotConfiguration.hpp"
 
 #include "../Application.hpp"
 
 namespace ztstl::bot {
+using Bot = TgBot::Bot;
+using BotMessage = TgBot::Message;
+using WebSocketMessage = websocket::Message;
 
 class BotApplication : public Application<BotApplication> {
    private:
-    using Bot = TgBot::Bot;
-    using Message = TgBot::Message;
+    friend class websocket::client::Session;
     friend class Application<BotApplication>;
 
    public:
@@ -29,10 +34,14 @@ class BotApplication : public Application<BotApplication> {
    private:
     void run_impl();
 
+    void onMessage(std::shared_ptr<websocket::client::Session> const& session, WebSocketMessage const& message);
+
    private:
     std::shared_ptr<Bot> m_bot;
+    websocket::SslContext m_sslContext;
     config::BotConfiguration::Ptr m_config;
     std::unique_ptr<ThreadPool> m_threadPool {nullptr};
+    std::shared_ptr<websocket::client::Session> m_session {nullptr};
 };
 
 }// namespace ztstl::bot

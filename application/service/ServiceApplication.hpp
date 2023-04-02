@@ -3,11 +3,14 @@
 //
 #pragma once
 
+#include <websocket/Server.hpp>
+
 #include "config/ServiceConfiguration.hpp"
 
 #include "../Application.hpp"
 
 namespace ztstl::service {
+
 class ServiceApplication : public Application<ServiceApplication> {
    private:
     friend class Application<ServiceApplication>;
@@ -26,6 +29,7 @@ class ServiceApplication : public Application<ServiceApplication> {
 
    private:
     config::ServiceConfiguration::Ptr m_config;
+    std::shared_ptr<websocket::Server> m_server;
     std::unique_ptr<ThreadPool> m_threadPool {nullptr};
 };
 }// namespace ztstl::service
