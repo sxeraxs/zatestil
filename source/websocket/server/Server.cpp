@@ -8,10 +8,6 @@
 namespace ztstl::websocket {
 using namespace server;
 
-std::string to_string(Endpoint const& endpoint) noexcept {
-    return fmt::format("{}:{}", endpoint.address().to_string(), endpoint.port());
-}
-
 Server::Server(Context& context, Config::Ptr config) :
     m_config {config},
     m_context {context},
