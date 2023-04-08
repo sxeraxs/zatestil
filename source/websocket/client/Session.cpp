@@ -16,7 +16,9 @@ namespace ztstl::websocket::client {
 
 Session::Session(BotApplicationPtr application, Endpoint endpoint, Context& context, SslContext& sslContext) :
     m_endpoint {std::move(endpoint)},
+    m_context {context},
     m_application {application},
+    m_wStrand {context},
     m_stream {asio::make_strand(context), sslContext} {};
 
 Result Session::open() noexcept {
@@ -64,13 +66,20 @@ Result Session::close() noexcept {
 }
 
 void Session::startRead() noexcept {
+    if (not m_stream.is_open()) {
+        return;
+    }
+
+    trace("reading from {}", to_string(remoteEndpoint()));
+    m_rBuffer.consume(m_rBuffer.size());
     auto self = shared_from_this();
-    m_stream.async_read(m_buffer, [self](auto errorCode, auto) {
+    m_stream.async_read(m_rBuffer, [self](auto errorCode, auto nReadBytes) {
         if (errorCode == beast::websocket::error::closed) {
             return;
         }
+        trace("read {} bytes from {}", nReadBytes, to_string(self->remoteEndpoint()));
 
-        auto result = Result {Result ::Success};
+        auto result = Result {Result::Success};
         if (errorCode) {
             result.code = Result::Error;
             result.message = fmt::format("{} - {} on endpoint {}", errorCode.value(), errorCode.what(), to_string(self->m_remoteEndpoint));
@@ -82,25 +91,29 @@ void Session::startRead() noexcept {
 
 void Session::onRead(Result const& result) {
     util::OnScopeExit _ {[&] {
-        m_buffer.consume(m_buffer.size());
         startRead();
     }};
 
     if (not result.isOk()) {
-        log::error("read error {}", result.message);
+        error("read error {}", result.message);
         return;
     }
 
     auto self = shared_from_this();
-    auto payload = m_buffer.data();
-    auto message = serde::from_binary<Message>(static_cast<uint8_t*>(payload.data()), payload.size());
-    m_application->onMessage(self, message);
+    auto payload = m_rBuffer.data();
+    m_context.post([self, payload] {
+        auto message = serde::from_binary<Message>(static_cast<uint8_t*>(payload.data()), payload.size());
+        self->m_application->onMessage(self, message);
+    });
 }
 
-void Session::write(std::string_view const& data) noexcept {
+void Session::send(std::string const& data) noexcept {
     m_stream.binary(true);
     auto self = shared_from_this();
-    m_stream.async_write(asio::buffer(data), [self](auto errorCode, auto) {
+    boost::asio::post(m_wStrand, [self, data]() mutable {
+        self->m_wBuffer = data;
+        beast::error_code errorCode {};
+        self->m_stream.write(asio::buffer(self->m_wBuffer), errorCode);
         auto result = Result {util::Result::Success};
         if (errorCode) {
             result.code = util::Result::Error;
@@ -113,13 +126,14 @@ void Session::write(std::string_view const& data) noexcept {
 
 void Session::onWrite(const Result& result) {
     if (not result.isOk()) {
-        log::error("write error {}", result.message);
+        error("write error {}", result.message);
         return;
     }
 }
 
-void Session::write(const Message& message) noexcept {
-    write(serde::to_binary(message));
+void Session::send(Message const& message) noexcept {
+    trace("send message {} {}", message.id, message.data);
+    send(serde::to_binary(message));
 }
 
 Endpoint const& Session::remoteEndpoint() const noexcept {

@@ -4,19 +4,19 @@
 #pragma once
 #include <memory>
 
-#include "websocket.hpp"
-
 #include <config/ServiceConfiguration.hpp>
+#include <log/log.hpp>
 #include <util/Result.hpp>
 
 #include "Message.hpp"
+#include "websocket.hpp"
 
 namespace ztstl::websocket {
 namespace server {
     class Session;
 }
 
-class Server : public std::enable_shared_from_this<Server> {
+class Server : public std::enable_shared_from_this<Server>, log_as(websocket) {
    public:
     using Config = config::ServiceConfiguration;
     friend class server::Session;
@@ -47,6 +47,5 @@ class Server : public std::enable_shared_from_this<Server> {
     TcpAcceptor m_acceptor;
     SslContext m_sslContext;
 };
-
 
 }// namespace ztstl::websocket
