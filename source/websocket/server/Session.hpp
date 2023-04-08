@@ -9,6 +9,7 @@
 #include <boost/beast/ssl.hpp>
 #include <boost/beast/websocket.hpp>
 #include <boost/beast/websocket/ssl.hpp>
+#include <log/log.hpp>
 #include <util/Result.hpp>
 #include <websocket/Server.hpp>
 
@@ -18,13 +19,13 @@ namespace beast = boost::beast;
 namespace http = beast::http;
 using Result = util::Result;
 
-class Session : public std::enable_shared_from_this<Session> {
+class Session : public std::enable_shared_from_this<Session>, log_as(websocket) {
    public:
     using FlatBuffer = beast::flat_buffer;
     using Stream = beast::websocket::stream<beast::ssl_stream<beast::tcp_stream>>;
 
    public:
-    Session(std::shared_ptr<Server> server, TcpSocket&& socket, SslContext& context);
+    Session(std::shared_ptr<Server> server, TcpSocket&& socket, Context& context, SslContext& sslContext);
 
     ~Session() noexcept;
     Session(Session&&) = delete;
@@ -39,11 +40,11 @@ class Session : public std::enable_shared_from_this<Session> {
 
     bool isOpen() const noexcept;
 
-    void write(Message const& message) noexcept;
+    void send(Message const& message) noexcept;
 
     Endpoint const& remoteEndpoint() const noexcept;
 
-    void write(std::string_view const& data) noexcept;
+    void send(std::string const& data) noexcept;
 
    private:
     void onOpen();
@@ -59,9 +60,12 @@ class Session : public std::enable_shared_from_this<Session> {
     void onHandshake(Result const& result);
 
    private:
+    Context& m_context;
     Endpoint m_remoteEndpoint;
     Stream m_stream;
-    FlatBuffer m_buffer;
+    FlatBuffer m_wBuffer;
+    FlatBuffer m_rBuffer;
+    Context::strand m_wStrand;
     std::shared_ptr<Server> m_server;
 };
 

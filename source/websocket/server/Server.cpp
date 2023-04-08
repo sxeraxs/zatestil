@@ -37,30 +37,31 @@ Server::Server(Context& context, Config::Ptr config) :
     beast::error_code ec {};
     m_acceptor.open(m_endpoint.protocol(), ec);
     if (ec) {
-        log::error("websocket server open error {} - {}", ec.value(), ec.what());
+        error("websocket server open error {} - {}", ec.value(), ec.what());
         return;
     }
 
     m_acceptor.set_option(asio::socket_base::reuse_address(true), ec);
     if (ec) {
-        log::error("websocket server set error {} - {}", ec.value(), ec.what());
+        error("websocket server set error {} - {}", ec.value(), ec.what());
         return;
     }
 
     m_acceptor.bind(m_endpoint, ec);
     if (ec) {
-        log::error("websocket server bind error {} - {}", ec.value(), ec.what());
+        error("websocket server bind error {} - {}", ec.value(), ec.what());
         return;
     }
 
     m_acceptor.listen(asio::socket_base::max_listen_connections, ec);
     if (ec) {
-        log::error("websocket server listen error {} - {}", ec.value(), ec.what());
+        error("websocket server listen error {} - {}", ec.value(), ec.what());
         return;
     }
 }
 
 void Server::startAccept() {
+    trace("starting accept on {}", to_string(m_endpoint));
     auto self = shared_from_this();
     m_acceptor.async_accept(asio::make_strand(m_context), [self](auto errorCode, TcpSocket socket) {
         auto result = Result {util::Result::Success};
@@ -73,7 +74,7 @@ void Server::startAccept() {
 }
 
 void Server::run() {
-    log::debug("listening on {}", to_string(m_endpoint));
+    debug("listening on {}", to_string(m_endpoint));
     startAccept();
 }
 
@@ -83,18 +84,20 @@ void Server::onAccept(const Result& result, TcpSocket socket) {
     }};
 
     if (not result.isOk()) {
-        log::error("websocket server accept error {}", result.message);
+        error("websocket server accept error {}", result.message);
         return;
     }
 
+    trace("accepted from {}", to_string(socket.remote_endpoint()));
+
     auto self = shared_from_this();
-    auto session = std::make_shared<Session>(self, std::move(socket), m_sslContext);
+    auto session = std::make_shared<Session>(self, std::move(socket), m_context, m_sslContext);
     session->open();
 }
 
 void Server::onMessage(std::shared_ptr<Session> const& session, Message const& message) {
-    log::debug("got message {} {} from {}", message.id, message.data, to_string(session->remoteEndpoint()));
-    session->write(message);
+    debug("got message {} {} from {}", message.id, message.data, to_string(session->remoteEndpoint()));
+    session->send(message);
 }
 
 }// namespace ztstl::websocket

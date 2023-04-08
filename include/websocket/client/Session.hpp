@@ -5,6 +5,7 @@
 #pragma once
 #include <memory>
 
+#include <log/log.hpp>
 #include <websocket/websocket.hpp>
 
 namespace ztstl::bot {
@@ -15,7 +16,7 @@ namespace ztstl::websocket::client {
 
 using BotApplicationPtr = bot::BotApplication*;
 
-class Session : public std::enable_shared_from_this<Session> {
+class Session : public std::enable_shared_from_this<Session>, log_as(websocket) {
    public:
     using FlatBuffer = beast::flat_buffer;
     using Stream = beast::websocket::stream<beast::ssl_stream<beast::tcp_stream>>;
@@ -36,11 +37,11 @@ class Session : public std::enable_shared_from_this<Session> {
 
     bool isOpen() const noexcept;
 
-    void write(Message const& message) noexcept;
+    void send(Message const& message) noexcept;
 
     Endpoint const& remoteEndpoint() const noexcept;
 
-    void write(std::string_view const& data) noexcept;
+    void send(std::string const& data) noexcept;
 
    private:
     void startRead() noexcept;
@@ -50,10 +51,13 @@ class Session : public std::enable_shared_from_this<Session> {
     void onWrite(Result const& result);
 
    private:
+    Context& m_context;
     Endpoint m_remoteEndpoint;
     Stream m_stream;
     Endpoint m_endpoint;
-    FlatBuffer m_buffer;
+    FlatBuffer m_rBuffer;
+    std::string m_wBuffer;
+    Context::strand m_wStrand;
     BotApplicationPtr m_application;
 };
 

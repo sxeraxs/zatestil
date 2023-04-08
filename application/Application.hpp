@@ -7,7 +7,7 @@
 #include <boost/asio.hpp>
 #include <log/log.hpp>
 
-#include "util/ThreadPool.hpp"
+#include "threads/ThreadPool.hpp"
 
 namespace ztstl {
 
@@ -15,7 +15,7 @@ using ThreadPool = util::ThreadPool;
 using Context = boost::asio::io_context;
 
 template <class T>
-class Application {
+class Application : log_as(application) {
    protected:
     using SignalSet = boost::asio::signal_set;
 
@@ -25,7 +25,7 @@ class Application {
         m_isRunning {false} {
         m_signalSet = std::make_unique<SignalSet>(m_context, SIGINT, SIGTERM);
         m_signalSet->async_wait([this](auto error, auto signal) {
-            log::debug("got signal {} with error {} message {}", signal, error.value(), error.message());
+            debug("got signal {} with error {} message {}", signal, error.value(), error.message());
 
             if (not error) {
                 m_isRunning = false;

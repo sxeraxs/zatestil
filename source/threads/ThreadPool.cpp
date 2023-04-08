@@ -1,11 +1,11 @@
 //
 // Created by aalisher on 3/26/23.
 //
-#include <log/log.hpp>
-#include <util/ThreadPool.hpp>
-#include <util/stacktrace.hpp>
+#include "threads/ThreadPool.hpp"
 
 #include "Semaphore.hpp"
+#include "log/log.hpp"
+#include "util/stacktrace.hpp"
 
 namespace ztstl::util {
 
@@ -14,13 +14,14 @@ void run(boost::asio::io_context& context) {
         try {
             context.run();
         } catch (std::exception const& ex) {
-            log::error("{} {}", ex.what(), current_exception_stacktrace_as_string());
-        } catch (...) { log::error("unknown error {}", current_exception_stacktrace_as_string()); }
+            log::error("[threads] {} {}", ex.what(), current_exception_stacktrace_as_string());
+        } catch (...) { log::error("[threads] unknown error {}", current_exception_stacktrace_as_string()); }
     }
 }
 
 ThreadPool::ThreadPool(ThreadPool::Context& context, size_t nThreads) : m_context {context} {
     nThreads = std::max(nThreads, static_cast<size_t>(std::thread::hardware_concurrency()));
+    trace("starting {} threads", nThreads);
 
     m_threads.reserve(nThreads);
 
@@ -32,7 +33,6 @@ ThreadPool::ThreadPool(ThreadPool::Context& context, size_t nThreads) : m_contex
         });
     }
     semaphore->wait();
-    log::debug("running threads {}", nThreads);
 }
 
 void ThreadPool::post(const ThreadPool::Function& func) {
@@ -46,6 +46,7 @@ ThreadPool::~ThreadPool() noexcept {
         }
     }
 
+    trace("shutdown {} threads", m_threads.size());
     m_threads.clear();
 }
 

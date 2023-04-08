@@ -5,11 +5,12 @@
 
 #include <boost/asio.hpp>
 
+#include "log/log.hpp"
 namespace ztstl::util {
 
 constexpr size_t minNThreads = 4;
 
-class ThreadPool {
+class ThreadPool : log_as(threads) {
    private:
     using Context = boost::asio::io_context;
     using Function = std::function<void()>;

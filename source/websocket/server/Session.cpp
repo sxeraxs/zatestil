@@ -13,13 +13,15 @@
 #include <websocket/Message.hpp>
 namespace ztstl::websocket::server {
 
-Session::Session(std::shared_ptr<Server> server, TcpSocket&& socket, SslContext& context) :
+Session::Session(std::shared_ptr<Server> server, TcpSocket&& socket, Context& context, SslContext& sslContext) :
     m_remoteEndpoint {socket.remote_endpoint()},
-    m_stream {std::move(socket), context},
-    m_server {std::move(server)} {}
+    m_stream {std::move(socket), sslContext},
+    m_server {std::move(server)},
+    m_wStrand {context},
+    m_context {context} {}
 
 void Session::open() noexcept {
-    log::debug("open session session from {}", to_string(remoteEndpoint()));
+    debug("open session session from {}", to_string(remoteEndpoint()));
     auto self = shared_from_this();
     asio::dispatch(m_stream.get_executor(), [self] {
         self->onOpen();
@@ -30,7 +32,7 @@ void Session::onOpen() {
     beast::get_lowest_layer(m_stream).expires_after(std::chrono::seconds(30));
     auto self = shared_from_this();
     m_stream.next_layer().async_handshake(ssl::stream_base::server, [self](auto errorCode) {
-        log::debug("handshaking with {}", to_string(self->remoteEndpoint()));
+        debug("handshaking with {}", to_string(self->remoteEndpoint()));
         auto result = Result {Result::Success};
 
         if (errorCode) {
@@ -43,19 +45,20 @@ void Session::onOpen() {
 
 void Session::onHandshake(Result const& result) {
     if (not result.isOk()) {
-        log::error("handshake error {}", result.message);
+        error("handshake error {}", result.message);
         return;
     }
-    log::debug("handshaking with {} is succeed", to_string(remoteEndpoint()));
+    debug("handshaking with {} is succeed", to_string(remoteEndpoint()));
 
     beast::get_lowest_layer(m_stream).expires_never();
+    m_stream.read_message_max(std::numeric_limits<size_t>::max());
     m_stream.set_option(beast::websocket::stream_base::timeout::suggested(beast::role_type::server));
 
     m_stream.set_option(beast::websocket::stream_base::decorator([](beast::websocket::response_type& res) {
         res.set(http::field::server, "websocket");
     }));
 
-    log::debug("accepting from {}", to_string(remoteEndpoint()));
+    debug("accepting from {}", to_string(remoteEndpoint()));
 
     auto self = shared_from_this();
     m_stream.async_accept([self](auto errorCode) {
@@ -70,36 +73,42 @@ void Session::onHandshake(Result const& result) {
 
 void Session::onAccept(Result const& result) {
     if (not result.isOk()) {
-        log::error("accept error {}", result.message);
+        error("accept error {}", result.message);
         return;
     }
 
-    log::debug("accepting from {} is succeed", to_string(remoteEndpoint()));
-
+    debug("accepting from {} is succeed", to_string(remoteEndpoint()));
     startRead();
 }
 
 void Session::onRead(Result const& result) {
     util::OnScopeExit _ {[&] {
-        m_buffer.consume(m_buffer.size());
         startRead();
     }};
 
     if (not result.isOk()) {
-        log::error("read error {}", result.message);
+        error("read error {}", result.message);
         return;
     }
 
     auto self = shared_from_this();
-    auto payload = m_buffer.data();
-    auto message = serde::from_binary<Message>(static_cast<uint8_t*>(payload.data()), payload.size());
-    m_server->onMessage(self, message);
+    auto payload = m_rBuffer.data();
+    m_context.post([self, payload] {
+        auto message = serde::from_binary<Message>(static_cast<uint8_t*>(payload.data()), payload.size());
+        self->m_server->onMessage(self, message);
+    });
 }
 
-void Session::write(std::string_view const& data) noexcept {
+void Session::send(std::string const& data) noexcept {
     m_stream.binary(true);
     auto self = shared_from_this();
-    m_stream.async_write(asio::buffer(data), [self](auto errorCode, auto) {
+    boost::asio::post(m_wStrand, [self, data]() mutable {
+        self->m_wBuffer.consume(self->m_wBuffer.size());
+        asio::buffer_copy(self->m_wBuffer.prepare(data.size()), asio::buffer(data));
+        self->m_wBuffer.commit(data.size());
+
+        beast::error_code errorCode {};
+        self->m_stream.write(self->m_wBuffer.data(), errorCode);
         auto result = Result {util::Result::Success};
         if (errorCode) {
             result.code = util::Result::Error;
@@ -110,8 +119,9 @@ void Session::write(std::string_view const& data) noexcept {
     });
 }
 
-void Session::write(Message const& message) noexcept {
-    write(serde::to_binary(message));
+void Session::send(Message const& message) noexcept {
+    trace("send message {} {}", message.id, message.data);
+    send(serde::to_binary(message));
 }
 
 bool Session::isOpen() const noexcept {
@@ -126,14 +136,15 @@ void Session::startRead() noexcept {
     if (not m_stream.is_open()) {
         return;
     }
-    log::debug("reading from {}", to_string(remoteEndpoint()));
+    trace("reading from {}", to_string(remoteEndpoint()));
 
+    m_rBuffer.consume(m_rBuffer.size());
     auto self = shared_from_this();
-    m_stream.async_read(m_buffer, [self](auto errorCode, auto nReadBytes) {
+    m_stream.async_read(m_rBuffer, [self](auto errorCode, auto nReadBytes) {
         if (errorCode == beast::websocket::error::closed) {
             return;
         }
-        log::debug("read {} bytes from {}", nReadBytes, to_string(self->remoteEndpoint()));
+        trace("read {} bytes from {}", nReadBytes, to_string(self->remoteEndpoint()));
 
         auto result = Result {Result::Success};
         if (errorCode) {
@@ -147,13 +158,13 @@ void Session::startRead() noexcept {
 
 void Session::onWrite(const Result& result) {
     if (not result.isOk()) {
-        log::error("write error {}", result.message);
+        error("write error {}", result.message);
         return;
     }
 }
 
 void Session::close() noexcept {
-    log::debug("close session from {}", to_string(remoteEndpoint()));
+    debug("close session from {}", to_string(remoteEndpoint()));
     if (not isOpen()) {
         return;
     }
@@ -161,7 +172,7 @@ void Session::close() noexcept {
     ztstl::websocket::beast::error_code ec {};
     m_stream.close(ztstl::websocket::beast::websocket::normal, ec);
     if (ec) {
-        log::error("session close error {} from {}", ec.what(), to_string(remoteEndpoint()));
+        error("session close error {} from {}", ec.what(), to_string(remoteEndpoint()));
     }
 }
 

@@ -3,6 +3,7 @@ application(NAME ${PROJECT_NAME}.service
         DEPENDENCIES
         ${PROJECT_NAME}.config
         ${PROJECT_NAME}.log
+        ${PROJECT_NAME}.threads
         ${PROJECT_NAME}.util
         ${PROJECT_NAME}.websocket.server
         ${Boost_LIBRARIES} tgbot

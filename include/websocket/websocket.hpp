@@ -23,6 +23,5 @@ using TcpAcceptor = Tcp::acceptor;
 using SslContext = ssl::context;
 using Context = boost::asio::io_context;
 using Result = util::Result;
-
 std::string to_string(Endpoint const& endpoint) noexcept;
 }// namespace ztstl::websocket

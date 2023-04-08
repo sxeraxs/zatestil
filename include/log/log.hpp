@@ -5,35 +5,90 @@
 
 #include <spdlog/spdlog.h>
 
+#include <algorithm>
+
 namespace ztstl::log {
 
-    void initialize(std::string const& name);
+void initialize(std::string const& name);
 
+template <class... Args>
+void debug(fmt::format_string<Args...> fmt, Args&&... args) {
+    spdlog::debug(fmt, std::forward<Args>(args)...);
+}
+
+template <class... Args>
+void trace(fmt::format_string<Args...> fmt, Args&&... args) {
+    spdlog::trace(fmt, std::forward<Args>(args)...);
+}
+
+template <class... Args>
+void info(fmt::format_string<Args...> fmt, Args&&... args) {
+    spdlog::info(fmt, std::forward<Args>(args)...);
+}
+
+template <class... Args>
+void warning(fmt::format_string<Args...> fmt, Args&&... args) {
+    spdlog::warn(fmt, std::forward<Args>(args)...);
+}
+
+template <class... Args>
+void error(fmt::format_string<Args...> fmt, Args&&... args) {
+    spdlog::error(fmt, std::forward<Args>(args)...);
+}
+
+template <class... Args>
+void critical(fmt::format_string<Args...> fmt, Args&&... args) {
+    spdlog::critical(fmt, std::forward<Args>(args)...);
+}
+
+void uninitialize();
+
+namespace _ {
+    template <size_t N>
+    struct constexpr_string {
+        constexpr constexpr_string(const char (&str)[N]) {
+            std::copy_n(str, N, value);
+        }
+
+        char value[N];
+    };
+}// namespace _
+
+template <_::constexpr_string tag>
+class Log {
+   public:
     template <class... Args>
-    void debug(fmt::format_string<Args...> fmt, Args&&... args) {
-        spdlog::debug(fmt, std::forward<Args>(args)...);
+    static void debug(fmt::format_string<Args...> fmt, Args&&... args) {
+        log::debug("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
     }
 
     template <class... Args>
-    void info(fmt::format_string<Args...> fmt, Args&&... args) {
-        spdlog::info(fmt, std::forward<Args>(args)...);
+    static void trace(fmt::format_string<Args...> fmt, Args&&... args) {
+        log::trace("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
     }
 
     template <class... Args>
-    void warning(fmt::format_string<Args...> fmt, Args&&... args) {
-        spdlog::warn(fmt, std::forward<Args>(args)...);
+    static void info(fmt::format_string<Args...> fmt, Args&&... args) {
+        log::info("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
     }
 
     template <class... Args>
-    void error(fmt::format_string<Args...> fmt, Args&&... args) {
-        spdlog::error(fmt, std::forward<Args>(args)...);
+    static void warning(fmt::format_string<Args...> fmt, Args&&... args) {
+        log::warning("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
     }
 
     template <class... Args>
-    void critical(fmt::format_string<Args...> fmt, Args&&... args) {
-        spdlog::critical(fmt, std::forward<Args>(args)...);
+    static void error(fmt::format_string<Args...> fmt, Args&&... args) {
+        log::error("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
     }
 
-    void uninitialize();
+    template <class... Args>
+    static void critical(fmt::format_string<Args...> fmt, Args&&... args) {
+        log::critical("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
+    }
+};
+}// namespace ztstl::log
 
-}// namespace ztstl
+#define log_as(tag) \
+   public           \
+    ztstl::log::Log<#tag>
