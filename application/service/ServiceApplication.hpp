@@ -3,6 +3,7 @@
 //
 #pragma once
 
+#include <storage/Storage.hpp>
 #include <websocket/Server.hpp>
 
 #include "config/ServiceConfiguration.hpp"
@@ -28,6 +29,7 @@ class ServiceApplication : public Application<ServiceApplication> {
     void run_impl();
 
    private:
+    storage::Storage::Ptr m_storage;
     config::ServiceConfiguration::Ptr m_config;
     std::shared_ptr<websocket::Server> m_server;
     std::unique_ptr<ThreadPool> m_threadPool {nullptr};

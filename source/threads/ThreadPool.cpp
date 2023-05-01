@@ -35,7 +35,7 @@ ThreadPool::ThreadPool(ThreadPool::Context& context, size_t nThreads) : m_contex
     semaphore->wait();
 }
 
-void ThreadPool::post(const ThreadPool::Function& func) {
+void ThreadPool::post(ThreadPool::Function const& func) {
     m_context.post(func);
 }
 

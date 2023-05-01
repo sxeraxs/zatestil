@@ -5,4 +5,6 @@ if (CMAKE_BUILD_TYPE STREQUAL "Debug" AND UNIX)
     endif ()
     include_directories(sfe/include)
     add_library(sfe STATIC sfe/src/sfe/sfe_preload.cpp)
+
+    target_link_libraries(sfe ${CMAKE_DL_LIBS})
 endif ()

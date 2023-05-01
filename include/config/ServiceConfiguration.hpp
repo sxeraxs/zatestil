@@ -28,6 +28,10 @@ class ServiceConfiguration : public Configuration<ServiceConfiguration>, public 
         return "ztsl-service";
     }
 
+    static std::string getDataDir() noexcept {
+        return "./storage";
+    }
+
     static std::string getAddress() noexcept {
         return "0.0.0.0";
     }
