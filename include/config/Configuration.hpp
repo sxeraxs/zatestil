@@ -9,7 +9,18 @@
 
 namespace ztstl::config {
 
-enum Param { BotToken, Name, Endpoint, Address, Port, SslCertificate, SslDhParams, SslPrivateKey, SslPassword };
+enum Param {
+    BotToken,
+    Name,
+    Endpoint,
+    Address,
+    Port,
+    SslCertificate,
+    SslDhParams,
+    SslPrivateKey,
+    SslPassword,
+    DataDir
+};
 
 template <class Config>
 class Configuration {
@@ -43,6 +54,8 @@ class Configuration {
             return self->getSslPrivateKey();
         } else if constexpr (param == SslPassword) {
             return self->getSslPassword();
+        } else if constexpr (param == DataDir) {
+            return self->getDataDir();
         }
     }
 };

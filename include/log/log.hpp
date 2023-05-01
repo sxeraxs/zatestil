@@ -56,7 +56,7 @@ namespace _ {
 
 template <_::constexpr_string tag>
 class Log {
-   public:
+   protected:
     template <class... Args>
     static void debug(fmt::format_string<Args...> fmt, Args&&... args) {
         log::debug("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));

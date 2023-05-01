@@ -1,3 +1,5 @@
 module(NAME log TYPE static
-        DEPENDENCIES spdlog::spdlog
+        DEPENDENCIES
+        spdlog::spdlog
+        ${Boost_LIBRARIES}
         )

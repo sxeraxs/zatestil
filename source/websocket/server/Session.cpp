@@ -32,7 +32,7 @@ void Session::onOpen() {
     beast::get_lowest_layer(m_stream).expires_after(std::chrono::seconds(30));
     auto self = shared_from_this();
     m_stream.next_layer().async_handshake(ssl::stream_base::server, [self](auto errorCode) {
-        debug("handshaking with {}", to_string(self->remoteEndpoint()));
+        trace("handshaking with {}", to_string(self->remoteEndpoint()));
         auto result = Result {Result::Success};
 
         if (errorCode) {
@@ -48,7 +48,7 @@ void Session::onHandshake(Result const& result) {
         error("handshake error {}", result.message);
         return;
     }
-    debug("handshaking with {} is succeed", to_string(remoteEndpoint()));
+    trace("handshaking with {} is succeed", to_string(remoteEndpoint()));
 
     beast::get_lowest_layer(m_stream).expires_never();
     m_stream.read_message_max(std::numeric_limits<size_t>::max());
@@ -58,7 +58,7 @@ void Session::onHandshake(Result const& result) {
         res.set(http::field::server, "websocket");
     }));
 
-    debug("accepting from {}", to_string(remoteEndpoint()));
+    trace("accepting from {}", to_string(remoteEndpoint()));
 
     auto self = shared_from_this();
     m_stream.async_accept([self](auto errorCode) {
@@ -77,7 +77,7 @@ void Session::onAccept(Result const& result) {
         return;
     }
 
-    debug("accepting from {} is succeed", to_string(remoteEndpoint()));
+    trace("accepting from {} is succeed", to_string(remoteEndpoint()));
     startRead();
 }
 
