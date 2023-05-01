@@ -20,6 +20,7 @@ if __name__ == '__main__':
     build_type = args.build
     root = os.path.abspath("..")
     binary_path = f"{root}/cmake-build-{build_type}/bin"
+    os.chdir(binary_path)
     zatestil = f"{binary_path}/zatestil"
 
     bot = Process(f"{zatestil}.bot", [])
