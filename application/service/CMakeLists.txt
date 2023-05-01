@@ -5,6 +5,7 @@ application(NAME ${PROJECT_NAME}.service
         ${Boost_LIBRARIES}
         ${PROJECT_NAME}.log
         ${PROJECT_NAME}.util
+        ${PROJECT_NAME}.hash
         ${PROJECT_NAME}.config
         ${PROJECT_NAME}.threads
         ${PROJECT_NAME}.storage

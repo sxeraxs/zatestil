@@ -38,6 +38,7 @@ add_subdirectory(third)
 find_package(Threads REQUIRED)
 find_package(GTest CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
+find_package(libsodium CONFIG REQUIRED)
 find_package(Boost REQUIRED CONFIG COMPONENTS ${BOOST_COMPONENTS})
 
 include_directories(include)

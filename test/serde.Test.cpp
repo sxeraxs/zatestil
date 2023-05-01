@@ -35,7 +35,7 @@ bool is_valid_binary_serializing(T const& object) {
     return resultObject == object;
 }
 
-TEST(serde, simple_structure) {
+TEST(serde, _0) {
     Foo foo {1, 2.5};
 
     ASSERT_TRUE(is_valid_json_serializing(foo));
@@ -48,7 +48,7 @@ struct AggregatedFoo {
     serializable_as(AggregatedFoo, c, foo);
 };
 
-TEST(serde, aggregated_structure) {
+TEST(serde, _1) {
     AggregatedFoo aggregatedFoo {"foo", {1, 2.2}};
 
     ASSERT_TRUE(is_valid_json_serializing(aggregatedFoo));
@@ -60,7 +60,7 @@ struct InheritedFoo : public Foo {
     inherited_serializable_as(InheritedFoo, Foo, c);
 };
 
-TEST(serde, inherited_structure) {
+TEST(serde, _2) {
     InheritedFoo inheritedFoo {.c = "foo"};
     inheritedFoo.a = 1;
     inheritedFoo.b = 2.3;
@@ -77,7 +77,7 @@ struct ArrayFoo {
     serializable_as(ArrayFoo, intArray, boolArray, stringArray);
 };
 
-TEST(serde, array_structure) {
+TEST(serde, _3) {
     std::vector<int> intArray {1, 45, 2, 0};
     std::vector<bool> boolArray {true, false, false, true};
     std::vector<std::string> stringArray {"a", "bb", "ccc", "dddd", "eeeee"};

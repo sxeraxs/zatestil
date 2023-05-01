@@ -3,11 +3,12 @@
 //
 
 #pragma once
+#include <hash/hash.hpp>
 #include <util/serde.hpp>
-
 namespace ztstl::storage {
 struct Block {
     std::string name;
+    hashable_as(Block, name);
     serializable_as(Block, name);
 };
 }// namespace ztstl::storage
