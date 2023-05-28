@@ -41,7 +41,7 @@ class Application : log_as(application) {
     Application& operator=(Application const&) = delete;
 
    public:
-    void run(){
+    void run() {
         m_isRunning = true;
         static_cast<T*>(this)->run_impl();
     };

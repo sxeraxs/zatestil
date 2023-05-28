@@ -60,6 +60,10 @@ qhvwIOmAObCzcoKkz3sChbk4ToUTqbC0TmFAXI5Upz1wnADzjpbJrpegCA3pmvhT
 -----END CERTIFICATE-----)";
     }
 
+    static std::string getRequestTimeout() noexcept {
+        return "10000";
+    }
+
     static std::string getBotToken() noexcept {
         return R"(6011320582:AAG55SmzWEJApUneCqWt9afjOb2XDDVdxbQ)";
     }

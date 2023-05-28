@@ -8,18 +8,18 @@
 #include <application/bot/BotApplication.hpp>
 #include <log/log.hpp>
 #include <util/OnScopeExit.hpp>
-#include <util/serde.hpp>
-#include <websocket/Message.hpp>
 #include <websocket/client/Session.hpp>
 
 namespace ztstl::websocket::client {
 
 Session::Session(BotApplicationPtr application, Endpoint endpoint, Context& context, SslContext& sslContext) :
-    m_endpoint {std::move(endpoint)},
     m_context {context},
-    m_application {application},
+    m_stream {asio::make_strand(context), sslContext},
+    m_endpoint {std::move(endpoint)},
     m_wStrand {context},
-    m_stream {asio::make_strand(context), sslContext} {};
+    m_application {application} {
+    m_handles->clear();
+};
 
 Result Session::open() noexcept {
     auto& lowestLayer = beast::get_lowest_layer(m_stream);
@@ -56,6 +56,7 @@ Result Session::open() noexcept {
 }
 
 Result Session::close() noexcept {
+    m_handles->clear();
     beast::error_code ec {};
     m_stream.close(beast::websocket::close_code::normal, ec);
     if (ec) {
@@ -89,22 +90,40 @@ void Session::startRead() noexcept {
     });
 }
 
+size_t Session::setHandle(Handle const& handle) noexcept {
+    static std::atomic_size_t handleId = 0;
+    size_t id = handleId++;
+    m_handles->insert(std::make_pair(id, handle));
+    trace("set handle {} session from {}", id, to_string(m_remoteEndpoint));
+    return id;
+}
+
+bool Session::unsetHandle(size_t handleId) noexcept {
+    trace("unset handle {} session from {}", handleId, to_string(m_remoteEndpoint));
+    return m_handles->erase(handleId) != 0;
+}
+
 void Session::onRead(Result const& result) {
     util::OnScopeExit _ {[&] {
         startRead();
     }};
 
     if (not result.isOk()) {
-        error("read error {}", result.message);
+        error("session read error {} from {}", result.message, to_string(m_remoteEndpoint));
         return;
     }
 
     auto self = shared_from_this();
     auto payload = m_rBuffer.data();
-    m_context.post([self, payload] {
-        auto message = serde::from_binary<Message>(static_cast<uint8_t*>(payload.data()), payload.size());
-        self->m_application->onMessage(self, message);
-    });
+    auto rawMessage = std::string(static_cast<char*>(payload.data()), payload.size());
+    auto const handlers = m_handles.get();
+    for (auto const& [id, handler] : handlers) {
+        m_context.post([self, id, handler, rawMessage] {
+            self->trace("message {} handling id {} is started", rawMessage, id);
+            handler(rawMessage);
+            self->trace("message {} handling id {} is succeed", id, rawMessage);
+        });
+    }
 }
 
 void Session::send(std::string const& data) noexcept {
@@ -129,11 +148,6 @@ void Session::onWrite(const Result& result) {
         error("write error {}", result.message);
         return;
     }
-}
-
-void Session::send(Message const& message) noexcept {
-    trace("send message {} {}", message.id, message.data);
-    send(serde::to_binary(message));
 }
 
 Endpoint const& Session::remoteEndpoint() const noexcept {

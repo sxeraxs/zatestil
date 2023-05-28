@@ -2,7 +2,8 @@
 
 #include <database/Database.hpp>
 #include <database/Table.hpp>
-#include <util/serde.hpp>
+
+#include "serde/serde.hpp"
 
 using namespace ztstl::database;
 
@@ -114,7 +115,7 @@ TEST(Database, _2) {/// << create, insert, erase, get, update, upsert, clear, fi
 
     {
         auto writer = db->makeWriter();
-        auto findCursor0 = table->find(table->begin(writer), table->end(writer), [&](TestDatabaseTable00::Pair const& pair) {
+        auto findCursor0 = table->find(table->begin(writer), table->end(writer), [&](TestDatabaseTable00::Pair const&) {
             return true;
         });
         ASSERT_TRUE(findCursor0.equal(table->end(writer)));
@@ -125,7 +126,7 @@ TEST(Database, _2) {/// << create, insert, erase, get, update, upsert, clear, fi
         ASSERT_TRUE(insertCursor.equal(insertCursor));
         ASSERT_EQ(insertCursor.value(), foo);
 
-        auto findCursor1 = table->find(table->begin(writer), table->end(writer), [&](TestDatabaseTable00::Pair const& pair) {
+        auto findCursor1 = table->find(table->begin(writer), table->end(writer), [&](TestDatabaseTable00::Pair const&) {
             return true;
         });
 

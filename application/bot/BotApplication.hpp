@@ -5,7 +5,10 @@
 #pragma once
 #include "tgbot/tgbot.h"
 
-#include <websocket/Message.hpp>
+#include <coro/coro.hpp>
+#include <message/Notifier.hpp>
+#include <message/Requester.hpp>
+#include <message/Responser.hpp>
 #include <websocket/client/Session.hpp>
 
 #include "config/BotConfiguration.hpp"
@@ -15,7 +18,6 @@
 namespace ztstl::bot {
 using Bot = TgBot::Bot;
 using BotMessage = TgBot::Message;
-using WebSocketMessage = websocket::Message;
 
 class BotApplication : public Application<BotApplication> {
    private:
@@ -34,7 +36,7 @@ class BotApplication : public Application<BotApplication> {
    private:
     void run_impl();
 
-    void onMessage(std::shared_ptr<websocket::client::Session> const& session, WebSocketMessage const& message);
+    coro::task<> onStart(BotMessage::Ptr const& msg);
 
    private:
     std::shared_ptr<Bot> m_bot;
@@ -42,6 +44,7 @@ class BotApplication : public Application<BotApplication> {
     config::BotConfiguration::Ptr m_config;
     std::unique_ptr<ThreadPool> m_threadPool {nullptr};
     std::shared_ptr<websocket::client::Session> m_session {nullptr};
+    std::shared_ptr<message::Requester<websocket::client::Session, config::BotConfiguration>> m_requester;
 };
 
 }// namespace ztstl::bot

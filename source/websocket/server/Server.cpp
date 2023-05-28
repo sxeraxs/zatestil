@@ -11,8 +11,8 @@ using namespace server;
 Server::Server(Context& context, Config::Ptr config) :
     m_config {config},
     m_context {context},
-    m_sslContext {ssl::context::tlsv12},
-    m_acceptor(asio::make_strand(context)) {
+    m_acceptor(asio::make_strand(context)),
+    m_sslContext {ssl::context::tlsv12} {
     m_endpoint = Endpoint(asio::ip::address::from_string(m_config->get<config::Address>()), std::stoul(m_config->get<config::Port>()));
 
     m_sslContext.set_password_callback([this](auto, auto) {
@@ -89,11 +89,6 @@ void Server::onAccept(const Result& result, TcpSocket socket) {
     auto self = shared_from_this();
     auto session = std::make_shared<Session>(self, std::move(socket), m_context, m_sslContext);
     session->open();
-}
-
-void Server::onMessage(std::shared_ptr<Session> const& session, Message const& message) {
-    debug("got message {} {} from {}", message.id, message.data, to_string(session->remoteEndpoint()));
-    session->send(message);
 }
 
 }// namespace ztstl::websocket

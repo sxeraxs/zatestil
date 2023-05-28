@@ -3,16 +3,18 @@
 //
 #pragma once
 
+#include <map>
+
 #include <boost/asio/dispatch.hpp>
 #include <boost/asio/strand.hpp>
 #include <boost/beast/core.hpp>
 #include <boost/beast/ssl.hpp>
 #include <boost/beast/websocket.hpp>
 #include <boost/beast/websocket/ssl.hpp>
+#include <boost/thread/synchronized_value.hpp>
 #include <log/log.hpp>
 #include <util/Result.hpp>
 #include <websocket/Server.hpp>
-
 namespace ztstl::websocket::server {
 
 namespace beast = boost::beast;
@@ -23,6 +25,8 @@ class Session : public std::enable_shared_from_this<Session>, log_as(websocket) 
    public:
     using FlatBuffer = beast::flat_buffer;
     using Stream = beast::websocket::stream<beast::ssl_stream<beast::tcp_stream>>;
+
+    using Handle = std::function<void(std::string const&)>;
 
    public:
     Session(std::shared_ptr<Server> server, TcpSocket&& socket, Context& context, SslContext& sslContext);
@@ -40,11 +44,13 @@ class Session : public std::enable_shared_from_this<Session>, log_as(websocket) 
 
     bool isOpen() const noexcept;
 
-    void send(Message const& message) noexcept;
-
     Endpoint const& remoteEndpoint() const noexcept;
 
     void send(std::string const& data) noexcept;
+
+    bool unsetHandle(size_t handleId) noexcept;
+
+    size_t setHandle(Handle const& handle) noexcept;
 
    private:
     void onOpen();
@@ -67,6 +73,7 @@ class Session : public std::enable_shared_from_this<Session>, log_as(websocket) 
     FlatBuffer m_rBuffer;
     Context::strand m_wStrand;
     std::shared_ptr<Server> m_server;
+    boost::synchronized_value<std::map<size_t, Handle>> m_handles {};
 };
 
 }// namespace ztstl::websocket::server

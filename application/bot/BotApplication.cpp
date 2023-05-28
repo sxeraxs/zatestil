@@ -3,45 +3,34 @@
 //
 #include "BotApplication.hpp"
 
+#include <object/Account.hpp>
 #include <websocket/websocket.hpp>
 
 #include "log/log.hpp"
 #include "util/stacktrace.hpp"
 namespace ztstl::bot {
 
+uint64_t message_id = 1;
+
 BotApplication::BotApplication(config::BotConfiguration::Ptr config, Context& context) :
     Application<BotApplication> {context},
-    m_config {config},
-    m_sslContext {websocket::ssl::context::tls_client} {
+    m_sslContext {websocket::ssl::context::tls_client},
+    m_config {config} {
     m_threadPool = std::make_unique<ThreadPool>(m_context);
     m_bot = std::make_shared<Bot>(m_config->get<config::BotToken>());
+    m_requester = std::make_shared<message::Requester<websocket::client::Session, config::BotConfiguration>>(context, m_session, m_config);
 }
 
 void BotApplication::run_impl() {
     m_bot->getEvents().onCommand("start", [&](BotMessage::Ptr const& msg) {
         m_threadPool->post([this, msg] {
-            debug("got start command from {} {}", msg->from->id, msg->from->firstName);
-            m_bot->getApi().sendMessage(msg->chat->id, fmt::format("Hi, {}!", msg->from->firstName));
+            auto task = onStart(msg);
         });
     });
 
     m_bot->getEvents().onAnyMessage([&](TgBot::Message::Ptr const& msg) {
         m_threadPool->post([this, msg] {
             debug("User {} wrote {}", msg->from->username, msg->text);
-            if (StringTools::startsWith(msg->text, "/start")) {
-                return;
-            }
-            if (not m_session) {
-                return;
-            }
-            if (not m_session->isOpen()) {
-                return;
-            }
-
-            WebSocketMessage message;
-            message.id = msg->chat->id;
-            message.data = fmt::format("message {} from {}", msg->text, msg->from->username);
-            m_session->send(message);
         });
     });
 
@@ -77,9 +66,14 @@ void BotApplication::run_impl() {
     }
 }
 
-void BotApplication::onMessage(const std::shared_ptr<websocket::client::Session>& session, WebSocketMessage const& message) {
-    debug("got message {} {} from {}", message.id, message.data, websocket::to_string(session->remoteEndpoint()));
-    m_bot->getApi().sendMessage(message.id, fmt::format("server sent {}", message.data));
+coro::task<> BotApplication::onStart(const BotMessage::Ptr& msg) {
+    debug("got start command from {} {}", msg->from->id, msg->from->firstName);
+    message::Message message {};
+    message.id = message_id++;
+    message.action = message::Action::Start;
+    message.type = message::Type::Request;
+    auto response = co_await m_requester->request(message);
+    co_return;
 }
 
 }// namespace ztstl::bot

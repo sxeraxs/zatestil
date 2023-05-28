@@ -1,10 +1,11 @@
 //
 // Created by aalisher on 3/2/23.
 //
+#include "serde/serde.hpp"
+
 #include <gtest/gtest.h>
 
 #include <log/log.hpp>
-#include <util/serde.hpp>
 
 struct Foo {
     int a;
@@ -61,7 +62,7 @@ struct InheritedFoo : public Foo {
 };
 
 TEST(serde, _2) {
-    InheritedFoo inheritedFoo {.c = "foo"};
+    InheritedFoo inheritedFoo {{0, 0.0}, "foo"};
     inheritedFoo.a = 1;
     inheritedFoo.b = 2.3;
 

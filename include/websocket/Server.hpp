@@ -8,7 +8,6 @@
 #include <log/log.hpp>
 #include <util/Result.hpp>
 
-#include "Message.hpp"
 #include "websocket.hpp"
 
 namespace ztstl::websocket {
@@ -37,8 +36,6 @@ class Server : public std::enable_shared_from_this<Server>, log_as(websocket) {
     void startAccept();
 
     void onAccept(util::Result const& result, TcpSocket socket);
-
-    void onMessage(std::shared_ptr<server::Session> const& session, Message const& message);
 
    private:
     Config::Ptr m_config;

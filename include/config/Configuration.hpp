@@ -19,7 +19,8 @@ enum Param {
     SslDhParams,
     SslPrivateKey,
     SslPassword,
-    DataDir
+    DataDir,
+    RequestTimeout
 };
 
 template <class Config>
@@ -56,6 +57,8 @@ class Configuration {
             return self->getSslPassword();
         } else if constexpr (param == DataDir) {
             return self->getDataDir();
+        } else if constexpr (param == RequestTimeout) {
+            return self->getRequestTimeout();
         }
     }
 };

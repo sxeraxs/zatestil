@@ -1,5 +1,6 @@
 add_subdirectory(config)
 add_subdirectory(log)
+add_subdirectory(message)
 add_subdirectory(database)
 add_subdirectory(storage)
 add_subdirectory(threads)

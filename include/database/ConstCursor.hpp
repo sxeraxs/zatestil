@@ -5,9 +5,8 @@
 #pragma once
 #include <spdlog/spdlog.h>
 
-#include <util/serde.hpp>
-
 #include "Id.hpp"
+#include "serde/serde.hpp"
 
 #include <mdbx.h++>
 

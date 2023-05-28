@@ -3,6 +3,10 @@
 //
 #pragma once
 
+#include <coro/coro.hpp>
+#include <message/Notifier.hpp>
+#include <message/Requester.hpp>
+#include <message/Responser.hpp>
 #include <storage/Storage.hpp>
 #include <websocket/Server.hpp>
 
@@ -17,7 +21,7 @@ class ServiceApplication : public Application<ServiceApplication> {
     friend class Application<ServiceApplication>;
 
    public:
-    explicit ServiceApplication(config::ServiceConfiguration::Ptr config, Context& context);
+    ServiceApplication(config::ServiceConfiguration::Ptr config, Context& context);
 
     ~ServiceApplication() noexcept = default;
     ServiceApplication(ServiceApplication&&) = delete;

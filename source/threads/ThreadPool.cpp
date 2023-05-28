@@ -3,7 +3,7 @@
 //
 #include "threads/ThreadPool.hpp"
 
-#include "Semaphore.hpp"
+#include <barrier>
 #include "log/log.hpp"
 #include "util/stacktrace.hpp"
 
@@ -25,14 +25,14 @@ ThreadPool::ThreadPool(ThreadPool::Context& context, size_t nThreads) : m_contex
 
     m_threads.reserve(nThreads);
 
-    auto semaphore = std::make_shared<Semaphore>(nThreads + 1);
+    auto barrier = std::barrier(nThreads + 1);
     for (size_t i = 0; i < nThreads; ++i) {
-        m_threads.emplace_back([this, semaphore]() {
-            semaphore->wait();
+        m_threads.emplace_back([this, &barrier]() {
+            barrier.arrive_and_wait();
             run(m_context);
         });
     }
-    semaphore->wait();
+    barrier.arrive_and_wait();
 }
 
 void ThreadPool::post(ThreadPool::Function const& func) {
