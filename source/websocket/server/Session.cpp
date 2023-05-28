@@ -9,16 +9,16 @@
 
 #include <log/log.hpp>
 #include <util/OnScopeExit.hpp>
-#include <util/serde.hpp>
-#include <websocket/Message.hpp>
+
+#include "serde/serde.hpp"
 namespace ztstl::websocket::server {
 
 Session::Session(std::shared_ptr<Server> server, TcpSocket&& socket, Context& context, SslContext& sslContext) :
+    m_context {context},
     m_remoteEndpoint {socket.remote_endpoint()},
     m_stream {std::move(socket), sslContext},
-    m_server {std::move(server)},
     m_wStrand {context},
-    m_context {context} {}
+    m_server {std::move(server)} {}
 
 void Session::open() noexcept {
     debug("open session session from {}", to_string(remoteEndpoint()));
@@ -87,16 +87,34 @@ void Session::onRead(Result const& result) {
     }};
 
     if (not result.isOk()) {
-        error("read error {}", result.message);
+        error("session read error {} from {}", result.message, to_string(m_remoteEndpoint));
         return;
     }
 
     auto self = shared_from_this();
     auto payload = m_rBuffer.data();
-    m_context.post([self, payload] {
-        auto message = serde::from_binary<Message>(static_cast<uint8_t*>(payload.data()), payload.size());
-        self->m_server->onMessage(self, message);
-    });
+    auto rawMessage = std::string(static_cast<char*>(payload.data()), payload.size());
+    auto const handlers = m_handles.get();
+    for (auto const& [id, handler] : handlers) {
+        m_context.post([self, id, handler, rawMessage] {
+            self->trace("message {} handling id {} is started", rawMessage, id);
+            handler(rawMessage);
+            self->trace("message {} handling id {} is succeed", id, rawMessage);
+        });
+    }
+}
+
+size_t Session::setHandle(Handle const& handle) noexcept {
+    static std::atomic_size_t handleId = 0;
+    size_t id = handleId++;
+    m_handles->insert(std::make_pair(id, handle));
+    trace("set handle {} session from {}", id, to_string(m_remoteEndpoint));
+    return id;
+}
+
+bool Session::unsetHandle(size_t handleId) noexcept {
+    trace("unset handle {} session from {}", handleId, to_string(m_remoteEndpoint));
+    return m_handles->erase(handleId) != 0;
 }
 
 void Session::send(std::string const& data) noexcept {
@@ -117,11 +135,6 @@ void Session::send(std::string const& data) noexcept {
 
         self->onWrite(result);
     });
-}
-
-void Session::send(Message const& message) noexcept {
-    trace("send message {} {}", message.id, message.data);
-    send(serde::to_binary(message));
 }
 
 bool Session::isOpen() const noexcept {

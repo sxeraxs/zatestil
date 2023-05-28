@@ -6,10 +6,9 @@
 
 #include <utility>
 
-#include <util/serde.hpp>
-
 #include "Cursor.hpp"
 #include "Database.hpp"
+#include "serde/serde.hpp"
 
 #include <mdbx.h++>
 namespace ztstl::database {

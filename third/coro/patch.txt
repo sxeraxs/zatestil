@@ -1,0 +1,55 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c78cdd6..ea2dacf 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -28,6 +28,7 @@ if(NOT LIBCORO_EXTERNAL_DEPENDENCIES)
+     set(CARES_STATIC    ON  CACHE INTERNAL "")
+     set(CARES_SHARED    OFF CACHE INTERNAL "")
+     set(CARES_INSTALL   OFF CACHE INTERNAL "")
++    set(EXPECTED_BUILD_TESTS OFF CACHE INTERNAL "")
+ 
+     add_subdirectory(vendor/c-ares/c-ares)
+     add_subdirectory(vendor/tartanllama/expected)
+@@ -48,19 +49,6 @@ set(LIBCORO_SOURCE_FILES
+     inc/coro/detail/poll_info.hpp
+     inc/coro/detail/void_value.hpp
+ 
+-    inc/coro/net/connect.hpp src/net/connect.cpp
+-    inc/coro/net/dns_resolver.hpp src/net/dns_resolver.cpp
+-    inc/coro/net/hostname.hpp
+-    inc/coro/net/ip_address.hpp src/net/ip_address.cpp
+-    inc/coro/net/recv_status.hpp src/net/recv_status.cpp
+-    inc/coro/net/send_status.hpp src/net/send_status.cpp
+-    inc/coro/net/socket.hpp src/net/socket.cpp
+-    inc/coro/net/ssl_context.hpp src/net/ssl_context.cpp
+-    inc/coro/net/ssl_handshake_status.hpp
+-    inc/coro/net/tcp_client.hpp src/net/tcp_client.cpp
+-    inc/coro/net/tcp_server.hpp src/net/tcp_server.cpp
+-    inc/coro/net/udp_peer.hpp src/net/udp_peer.cpp
+-
+     inc/coro/coro.hpp
+     inc/coro/event.hpp src/event.cpp
+     inc/coro/fd.hpp
+diff --git a/inc/coro/coro.hpp b/inc/coro/coro.hpp
+index e74fdaa..5f28735 100644
+--- a/inc/coro/coro.hpp
++++ b/inc/coro/coro.hpp
+@@ -6,18 +6,6 @@
+ #include "coro/concepts/promise.hpp"
+ #include "coro/concepts/range_of.hpp"
+ 
+-#include "coro/net/connect.hpp"
+-#include "coro/net/dns_resolver.hpp"
+-#include "coro/net/hostname.hpp"
+-#include "coro/net/ip_address.hpp"
+-#include "coro/net/recv_status.hpp"
+-#include "coro/net/send_status.hpp"
+-#include "coro/net/socket.hpp"
+-#include "coro/net/ssl_context.hpp"
+-#include "coro/net/tcp_client.hpp"
+-#include "coro/net/tcp_server.hpp"
+-#include "coro/net/udp_peer.hpp"
+-
+ #include "coro/event.hpp"
+ #include "coro/generator.hpp"
+ #include "coro/io_scheduler.hpp"

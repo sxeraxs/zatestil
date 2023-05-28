@@ -8,7 +8,7 @@
 namespace ztstl::util {
 struct Result {
     enum Code : uint8_t { Success = 0, Error = 1, Critical = 2 } code;
-    std::string message;
+    std::string message {};
 
     bool isOk() const noexcept;
 

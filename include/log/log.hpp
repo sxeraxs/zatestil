@@ -12,32 +12,32 @@ namespace ztstl::log {
 void initialize(std::string const& name);
 
 template <class... Args>
-void debug(fmt::format_string<Args...> fmt, Args&&... args) {
+void debug(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
     spdlog::debug(fmt, std::forward<Args>(args)...);
 }
 
 template <class... Args>
-void trace(fmt::format_string<Args...> fmt, Args&&... args) {
+void trace(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
     spdlog::trace(fmt, std::forward<Args>(args)...);
 }
 
 template <class... Args>
-void info(fmt::format_string<Args...> fmt, Args&&... args) {
+void info(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
     spdlog::info(fmt, std::forward<Args>(args)...);
 }
 
 template <class... Args>
-void warning(fmt::format_string<Args...> fmt, Args&&... args) {
+void warning(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
     spdlog::warn(fmt, std::forward<Args>(args)...);
 }
 
 template <class... Args>
-void error(fmt::format_string<Args...> fmt, Args&&... args) {
+void error(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
     spdlog::error(fmt, std::forward<Args>(args)...);
 }
 
 template <class... Args>
-void critical(fmt::format_string<Args...> fmt, Args&&... args) {
+void critical(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
     spdlog::critical(fmt, std::forward<Args>(args)...);
 }
 
@@ -58,32 +58,32 @@ template <_::constexpr_string tag>
 class Log {
    protected:
     template <class... Args>
-    static void debug(fmt::format_string<Args...> fmt, Args&&... args) {
+    static void debug(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
         log::debug("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
     }
 
     template <class... Args>
-    static void trace(fmt::format_string<Args...> fmt, Args&&... args) {
+    static void trace(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
         log::trace("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
     }
 
     template <class... Args>
-    static void info(fmt::format_string<Args...> fmt, Args&&... args) {
+    static void info(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
         log::info("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
     }
 
     template <class... Args>
-    static void warning(fmt::format_string<Args...> fmt, Args&&... args) {
+    static void warning(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
         log::warning("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
     }
 
     template <class... Args>
-    static void error(fmt::format_string<Args...> fmt, Args&&... args) {
+    static void error(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
         log::error("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
     }
 
     template <class... Args>
-    static void critical(fmt::format_string<Args...> fmt, Args&&... args) {
+    static void critical(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
         log::critical("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
     }
 };

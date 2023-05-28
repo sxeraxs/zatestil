@@ -7,6 +7,7 @@ application(NAME ${PROJECT_NAME}.service
         ${PROJECT_NAME}.util
         ${PROJECT_NAME}.hash
         ${PROJECT_NAME}.config
+        ${PROJECT_NAME}.message
         ${PROJECT_NAME}.threads
         ${PROJECT_NAME}.storage
         ${PROJECT_NAME}.database

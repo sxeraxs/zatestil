@@ -6,10 +6,10 @@
 
 #include <boost/preprocessor/seq/for_each.hpp>
 #include <boost/preprocessor/variadic/to_seq.hpp>
-#include <yas/serialize.hpp>
-#include <yas/std_types.hpp>
 
-#include "type_traits.hpp"
+#include "third/yas/yas/include/yas/serialize.hpp"
+#include "third/yas/yas/include/yas/std_types.hpp"
+#include "util/type_traits.hpp"
 
 #define comparable_as(T, ...)                                                          \
    public:                                                                             \
@@ -103,12 +103,12 @@ T from_json(std::string_view const& buffer) {
 
 namespace _ {
     template <class T>
-    inline constexpr bool compare(T const& lv, T const& rv) {
+    constexpr bool compare(T const& lv, T const& rv) {
         return lv == rv;
     }
 
     template <>
-    inline constexpr bool compare<float>(float const& lv, float const& rv) {
+    constexpr bool compare<float>(float const& lv, float const& rv) {
         return std::abs(lv - rv) < 10e-8;
     }
 

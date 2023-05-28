@@ -8,6 +8,7 @@ application(NAME ${PROJECT_NAME}.bot
         ${PROJECT_NAME}.hash
         ${PROJECT_NAME}.config
         ${PROJECT_NAME}.threads
+        ${PROJECT_NAME}.message
         ${PROJECT_NAME}.websocket.util
         ${PROJECT_NAME}.websocket.client
         )

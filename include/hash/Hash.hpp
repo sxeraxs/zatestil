@@ -6,7 +6,7 @@
 #include <array>
 #include <string>
 
-#include <util/serde.hpp>
+#include "serde/serde.hpp"
 namespace ztstl::hash {
 
 template <size_t size>

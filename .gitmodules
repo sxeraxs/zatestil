@@ -10,3 +10,6 @@
 [submodule "third/mdbx/mdbx"]
 	path = third/mdbx/mdbx
 	url = https://gitflic.ru/project/erthink/libmdbx.git
+[submodule "third/coro/coro"]
+	path = third/coro/coro
+	url = https://github.com/jbaldwin/libcoro.git

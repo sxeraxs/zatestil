@@ -3,11 +3,12 @@
 //
 
 #pragma once
+#include <map>
 #include <memory>
 
+#include <boost/thread/synchronized_value.hpp>
 #include <log/log.hpp>
 #include <websocket/websocket.hpp>
-
 namespace ztstl::bot {
 class BotApplication;
 }// namespace ztstl::bot
@@ -20,6 +21,8 @@ class Session : public std::enable_shared_from_this<Session>, log_as(websocket) 
    public:
     using FlatBuffer = beast::flat_buffer;
     using Stream = beast::websocket::stream<beast::ssl_stream<beast::tcp_stream>>;
+
+    using Handle = std::function<void(std::string const&)>;
 
    public:
     Session(BotApplicationPtr application, Endpoint endpoint, Context& context, SslContext& sslContext);
@@ -37,11 +40,13 @@ class Session : public std::enable_shared_from_this<Session>, log_as(websocket) 
 
     bool isOpen() const noexcept;
 
-    void send(Message const& message) noexcept;
-
     Endpoint const& remoteEndpoint() const noexcept;
 
     void send(std::string const& data) noexcept;
+
+    bool unsetHandle(size_t handleId) noexcept;
+
+    size_t setHandle(Handle const& handle) noexcept;
 
    private:
     void startRead() noexcept;
@@ -59,6 +64,7 @@ class Session : public std::enable_shared_from_this<Session>, log_as(websocket) 
     std::string m_wBuffer;
     Context::strand m_wStrand;
     BotApplicationPtr m_application;
+    boost::synchronized_value<std::map<size_t, Handle>> m_handles {};
 };
 
 }// namespace ztstl::websocket::client

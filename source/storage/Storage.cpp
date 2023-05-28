@@ -16,7 +16,8 @@ Storage::Storage(ztstl::config::ServiceConfiguration* config) noexcept {
     }
 
     m_main = MainDb::instance(root / "main");
-    m_blocks = m_main->openTable<Block, Id::_0>("blocks");
+    m_blocks = m_main->openTable<object::Block, Id::_0>("blocks");
+    m_accounts = m_main->openTable<object::Account, Id::_1>("accounts");
 }
 
 Storage::~Storage() noexcept {
