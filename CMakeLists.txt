@@ -30,12 +30,14 @@ message(STATUS "CMAKE_CXX_FLAGS_DEBUG = ${CMAKE_CXX_FLAGS_DEBUG}")
 message(STATUS "CMAKE_CXX_FLAGS_RELEASE = ${CMAKE_CXX_FLAGS_RELEASE}")
 message(STATUS "CMAKE_CXX_FLAGS_RELWITHDEBINFO = ${CMAKE_CXX_FLAGS_RELWITHDEBINFO}")
 
+execute_process(COMMAND git submodule update --init --recursive
+        WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+        RESULT_VARIABLE SUBMODULE_UPDATE
+        ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)
+message(STATUS "Submodules update result is ${SUBMODULE_UPDATE}")
+
 set(BOOST_COMPONENTS)
 list(APPEND BOOST_COMPONENTS system program_options thread context coroutine)
-
-execute_process(COMMAND bash -c "git submodule update --init --recursive"
-        WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
-        ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)
 
 add_subdirectory(third)
 find_package(Threads REQUIRED)
