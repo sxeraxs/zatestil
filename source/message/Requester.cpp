@@ -97,13 +97,8 @@ bool Requester<Session, Config>::TimedMessage::Awaiter::await_suspend(std::corou
             return;
         }
 
-        Message message {};
-        message.status.ok = false;
-        message.type = Type::Response;
-        message.id = msg->m_message.id;
-        message.status.message = "timed out";
-        message.action = msg->m_message.action;
-        msg->set(message);
+        auto response = make_response(msg->m_message, {false, "timed out"});
+        msg->set(response);
     });
     return true;
 }
