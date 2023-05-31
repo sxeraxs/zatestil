@@ -27,36 +27,44 @@ struct Message {
     serializable_as(Message, id, type, action, status, data);
 };
 
-template <class Payload>
-Message make_request(uint64_t id, Action action, Payload payload) {
-    Message message;
-    message.id = id;
-    message.action = action;
-    message.type = Type::Request;
-    message.data = serde::to_json(payload);
-    return message;
+inline uint64_t next_id() noexcept {
+    static std::atomic_uint64_t id = 0;
+    return ++id;
 }
 
-template <class Payload>
-Message make_response(uint64_t id, Action action, Status status, Payload payload) {
-    Message message;
-    message.id = id;
-    message.action = action;
-    message.type = Type::Response;
-    message.status = std::move(status);
-    message.data = serde::to_json(payload);
-    return message;
+template <Action action, class Payload, class... Args>
+Message make_request(Args... args) {
+    auto payload = Payload {std::forward<Args>(args)...};
+    Message request {};
+    request.id = next_id();
+    request.action = action;
+    request.type = Type::Request;
+    request.data = serde::to_json(payload);
+    return request;
 }
 
-template <class Payload>
-Message make_notify(uint64_t id, Action action, Status status, Payload payload) {
-    Message message;
-    message.id = id;
-    message.action = action;
-    message.type = Type::Notify;
-    message.status = std::move(status);
-    message.data = serde::to_json(payload);
-    return message;
+template <class Payload, class... Args>
+Message make_response(Message const& request, Status status, Args... args) {
+    auto payload = Payload {std::forward<Args>(args)...};
+    Message response {};
+    response.id = request.id;
+    response.type = Type::Response;
+    response.action = request.action;
+    response.status = std::move(status);
+    response.data = serde::to_json(payload);
+    return response;
+}
+
+template <Action action, class Payload, class... Args>
+Message make_notify(Status status, Args... args) {
+    auto payload = Payload {std::forward<Args>(args)...};
+    Message notify {};
+    notify.id = next_id();
+    notify.action = action;
+    notify.type = Type::Notify;
+    notify.status = std::move(status);
+    notify.data = serde::to_json(payload);
+    return notify;
 }
 
 }// namespace ztstl::message

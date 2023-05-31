@@ -43,8 +43,13 @@ class MessageTest : public ::testing::Test {
     std::unique_ptr<ztstl::test::TestApplication> m_application;
 };
 
+struct MessageFoo {
+    int a;
+    serializable_as(MessageFoo, a);
+};
+
 TEST_F(MessageTest, _0) {
-    auto main = [&]() -> coro::task<bool> {
+    auto main = [&]() -> coro::task<size_t> {
         Message message {};
         message.id = 0;
         message.status.ok = true;
@@ -55,52 +60,56 @@ TEST_F(MessageTest, _0) {
         auto response = co_await m_requester->request(message);
         ztstl::log::info("response {}", ztstl::serde::to_json(response));
         if (response.status.ok) {
-            co_return false;
+            co_return 1;
         }
 
         if (response.status.message != "timed out") {
-            co_return false;
+            co_return 2;
         }
 
         if (response.type != ztstl::message::Type::Response) {
-            co_return false;
+            co_return 3;
         }
-        co_return true;
+        co_return 0;
     };
-    ASSERT_TRUE(coro::sync_wait(main()));
+    ASSERT_EQ(coro::sync_wait(main()), 0);
 }
 
 TEST_F(MessageTest, _1) {
-    auto main = [&]() -> coro::task<bool> {
+    using namespace ztstl::message;
+    auto main = [&]() -> coro::task<size_t> {
         m_server->setHandle([&](auto const& rawMessage) {
             auto message = ztstl::serde::from_json<Message>(rawMessage);
             message.type = ztstl::message::Type::Response;
+            message.status.ok = true;
             m_server->send(ztstl::serde::to_json(message));
         });
 
-        Message message {};
-        message.id = 0;
-        message.status.ok = true;
-        message.type = ztstl::message::Type::Request;
-        message.action = ztstl::message::Action::Start;
-        message.data = "Start";
-
-        auto response = co_await m_requester->request(message);
+        auto request = make_request<Action::Start, MessageFoo>(1);
+        auto response = co_await m_requester->request(request);
         ztstl::log::info("response {}", ztstl::serde::to_json(response));
         if (not response.status.ok) {
-            co_return false;
+            co_return 1;
         }
 
         if (response.type != ztstl::message::Type::Response) {
-            co_return false;
+            co_return 2;
         }
-        co_return true;
+
+        if (response.id != request.id) {
+            co_return 3;
+        }
+
+        if (response.action != request.action) {
+            co_return 4;
+        }
+        co_return 0;
     };
-    ASSERT_TRUE(coro::sync_wait(main()));
+    ASSERT_EQ(coro::sync_wait(main()), 0);
 }
 
 TEST_F(MessageTest, _2) {
-    auto main = [&]() -> coro::task<bool> {
+    auto main = [&]() -> coro::task<size_t> {
         m_server->setHandle([&](auto const& rawMessage) {
             auto message = ztstl::serde::from_json<Message>(rawMessage);
             message.type = ztstl::message::Type::Response;
@@ -119,9 +128,9 @@ TEST_F(MessageTest, _2) {
         ztstl::log::info("response {}", ztstl::serde::to_json(response));
 
         if (response.type != ztstl::message::Type::Response) {
-            co_return false;
+            co_return 1;
         }
-        co_return true;
+        co_return 0;
     };
-    ASSERT_TRUE(coro::sync_wait(main()));
+    ASSERT_EQ(coro::sync_wait(main()), 0);
 }
