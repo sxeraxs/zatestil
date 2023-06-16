@@ -13,7 +13,9 @@
 #include "util/Singleton.hpp"
 namespace ztstl::storage {
 using namespace database;
-class Storage : log_as(storage), public util::Singleton<Storage> {
+class Storage : public util::Singleton<Storage> {
+    log_as(storage);
+
    private:
     friend class util::Singleton<Storage>;
 

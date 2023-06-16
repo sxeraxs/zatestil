@@ -21,7 +21,9 @@ namespace beast = boost::beast;
 namespace http = beast::http;
 using Result = util::Result;
 
-class Session : public std::enable_shared_from_this<Session>, log_as(websocket) {
+class Session : public std::enable_shared_from_this<Session> {
+    log_as(websocket);
+
    public:
     using FlatBuffer = beast::flat_buffer;
     using Stream = beast::websocket::stream<beast::ssl_stream<beast::tcp_stream>>;

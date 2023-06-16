@@ -20,7 +20,9 @@ class txn_managed;
 namespace ztstl::database {
 
 template <Id id>
-class Database : log_as(database), public util::Singleton<Database<id>> {
+class Database : public util::Singleton<Database<id>> {
+    log_as(database);
+
    private:
     template <class, Id, Id>
     friend class Table;

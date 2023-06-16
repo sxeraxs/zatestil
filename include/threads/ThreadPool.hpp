@@ -10,7 +10,9 @@ namespace ztstl::util {
 
 constexpr size_t minNThreads = 4;
 
-class ThreadPool : log_as(threads) {
+class ThreadPool {
+    log_as(threads);
+
    private:
     using Context = boost::asio::io_context;
     using Function = std::function<void()>;

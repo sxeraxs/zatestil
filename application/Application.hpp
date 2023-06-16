@@ -15,14 +15,14 @@ using ThreadPool = util::ThreadPool;
 using Context = boost::asio::io_context;
 
 template <class T>
-class Application : log_as(application) {
+class Application {
+    log_as(application);
+
    protected:
     using SignalSet = boost::asio::signal_set;
 
    public:
-    explicit Application(Context& context) :
-        m_context{context},
-        m_isRunning {false} {
+    explicit Application(Context& context) : m_context {context}, m_isRunning {false} {
         m_signalSet = std::make_unique<SignalSet>(m_context, SIGINT, SIGTERM);
         m_signalSet->async_wait([this](auto error, auto signal) {
             debug("got signal {} with error {} message {}", signal, error.value(), error.message());
@@ -49,7 +49,7 @@ class Application : log_as(application) {
    protected:
     Context& m_context;
     std::atomic_bool m_isRunning {false};
-    std::unique_ptr<SignalSet> m_signalSet{nullptr};
+    std::unique_ptr<SignalSet> m_signalSet {nullptr};
 };
 
 }// namespace ztstl

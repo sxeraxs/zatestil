@@ -22,7 +22,9 @@ using SharedLock = std::shared_lock<std::shared_mutex>;
 using UniqueLock = std::unique_lock<std::shared_mutex>;
 
 template <Id id>
-class Reader : log_as(database) {
+class Reader {
+    log_as(database);
+
    protected:
     template <class, Id, Id>
     friend class Table;

@@ -19,7 +19,9 @@
 namespace ztstl::message {
 using Context = boost::asio::io_context;
 template <class Session, class Config>
-class Requester : log_as(message), public std::enable_shared_from_this<Requester<Session, Config>> {
+class Requester : public std::enable_shared_from_this<Requester<Session, Config>> {
+    log_as(message);
+
    public:
     class TimedMessage : public std::enable_shared_from_this<TimedMessage> {
        public:
@@ -38,8 +40,7 @@ class Requester : log_as(message), public std::enable_shared_from_this<Requester
         };
 
        public:
-        TimedMessage(Context& context, std::shared_ptr<Session> session, Message message, std::chrono::milliseconds duration,
-                     std::shared_ptr<std::map<uint64_t, std::shared_ptr<TimedMessage>>> timedMessages) noexcept;
+        TimedMessage(Context& context, std::shared_ptr<Session> session, Message message, std::chrono::milliseconds duration, std::shared_ptr<std::map<uint64_t, std::shared_ptr<TimedMessage>>> timedMessages) noexcept;
         ~TimedMessage() noexcept;
 
         TimedMessage(TimedMessage const&) = delete;
