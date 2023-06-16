@@ -25,7 +25,7 @@ ThreadPool::ThreadPool(ThreadPool::Context& context, size_t nThreads) : m_contex
 
     m_threads.reserve(nThreads);
 
-    auto barrier = std::barrier(nThreads + 1);
+    auto barrier = std::barrier(static_cast<ptrdiff_t>(nThreads + 1));
     for (size_t i = 0; i < nThreads; ++i) {
         m_threads.emplace_back([this, &barrier]() {
             barrier.arrive_and_wait();
