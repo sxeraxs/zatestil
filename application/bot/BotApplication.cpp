@@ -3,7 +3,7 @@
 //
 #include "BotApplication.hpp"
 
-#include <object/Account.hpp>
+#include <object/account/Account.hpp>
 #include <websocket/websocket.hpp>
 
 #include "log/log.hpp"

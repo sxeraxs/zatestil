@@ -10,11 +10,13 @@ namespace ztstl::object {
 using Hash = hash::Hash<crypto_hash_sha256_BYTES>;
 
 struct Block {
-    Hash prev;
+    Hash prevHash;
+    Hash selfHash;
     uint64_t height;
     Transaction::Ptr transaction;
+    Transaction::Type transactionType;
 
-    hashable_as(Block, height, prev, transaction);
-    serializable_as(Block, height, prev, transaction);
+    hashable_as(Block, height, prevHash, transaction);
+    serializable_as(Block, height, prevHash, transaction, transactionType);
 };
 }// namespace ztstl::object

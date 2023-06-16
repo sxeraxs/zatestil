@@ -6,7 +6,7 @@
 
 #include <config/ServiceConfiguration.hpp>
 #include <database/Database.hpp>
-#include <object/Account.hpp>
+#include <object/account/Account.hpp>
 #include <object/Block.hpp>
 
 #include "log/log.hpp"
