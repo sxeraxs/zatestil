@@ -7,6 +7,38 @@
 
 #include <algorithm>
 
+#define log_as(tag)                                                                           \
+   private:                                                                                   \
+    template <class... Args>                                                                  \
+    static void debug(fmt::format_string<Args...> fmt, Args&&... args) noexcept {             \
+        ztstl::log::debug("[{}] {}", #tag, fmt::format(fmt, std::forward<Args>(args)...));    \
+    }                                                                                         \
+                                                                                              \
+    template <class... Args>                                                                  \
+    static void trace(fmt::format_string<Args...> fmt, Args&&... args) noexcept {             \
+        ztstl::log::trace("[{}] {}", #tag, fmt::format(fmt, std::forward<Args>(args)...));    \
+    }                                                                                         \
+                                                                                              \
+    template <class... Args>                                                                  \
+    static void info(fmt::format_string<Args...> fmt, Args&&... args) noexcept {              \
+        ztstl::log::info("[{}] {}", #tag, fmt::format(fmt, std::forward<Args>(args)...));     \
+    }                                                                                         \
+                                                                                              \
+    template <class... Args>                                                                  \
+    static void warning(fmt::format_string<Args...> fmt, Args&&... args) noexcept {           \
+        ztstl::log::warning("[{}] {}", #tag, fmt::format(fmt, std::forward<Args>(args)...));  \
+    }                                                                                         \
+                                                                                              \
+    template <class... Args>                                                                  \
+    static void error(fmt::format_string<Args...> fmt, Args&&... args) noexcept {             \
+        ztstl::log::error("[{}] {}", #tag, fmt::format(fmt, std::forward<Args>(args)...));    \
+    }                                                                                         \
+                                                                                              \
+    template <class... Args>                                                                  \
+    static void critical(fmt::format_string<Args...> fmt, Args&&... args) noexcept {          \
+        ztstl::log::critical("[{}] {}", #tag, fmt::format(fmt, std::forward<Args>(args)...)); \
+    }
+
 namespace ztstl::log {
 
 void initialize(std::string const& name);
@@ -42,53 +74,4 @@ void critical(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
 }
 
 void uninitialize();
-
-namespace _ {
-    template <size_t N>
-    struct constexpr_string {
-        constexpr constexpr_string(const char (&str)[N]) {
-            std::copy_n(str, N, value);
-        }
-
-        char value[N];
-    };
-}// namespace _
-
-template <_::constexpr_string tag>
-class Log {
-   protected:
-    template <class... Args>
-    static void debug(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
-        log::debug("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
-    }
-
-    template <class... Args>
-    static void trace(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
-        log::trace("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
-    }
-
-    template <class... Args>
-    static void info(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
-        log::info("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
-    }
-
-    template <class... Args>
-    static void warning(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
-        log::warning("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
-    }
-
-    template <class... Args>
-    static void error(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
-        log::error("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
-    }
-
-    template <class... Args>
-    static void critical(fmt::format_string<Args...> fmt, Args&&... args) noexcept {
-        log::critical("[{}] {}", tag.value, fmt::format(fmt, std::forward<Args>(args)...));
-    }
-};
 }// namespace ztstl::log
-
-#define log_as(tag) \
-   public           \
-    ztstl::log::Log<#tag>

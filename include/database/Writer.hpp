@@ -8,6 +8,8 @@ namespace ztstl::database {
 
 template <Id id>
 class Writer : public Reader<id> {
+    log_as(database);
+
    private:
     template <class, Id, Id>
     friend class Table;

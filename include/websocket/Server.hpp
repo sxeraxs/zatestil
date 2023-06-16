@@ -15,7 +15,9 @@ namespace server {
     class Session;
 }
 
-class Server : public std::enable_shared_from_this<Server>, log_as(websocket) {
+class Server : public std::enable_shared_from_this<Server> {
+    log_as(websocket);
+
    public:
     using Config = config::ServiceConfiguration;
     friend class server::Session;

@@ -14,7 +14,9 @@
 namespace ztstl::database {
 
 template <class Value, Id id, Id tableId>
-class Table : log_as(database) {
+class Table {
+    log_as(database);
+
    public:
     using Handle = mdbx::map_handle;
     using Reader = ztstl::database::Reader<id>;

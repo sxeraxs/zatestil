@@ -8,7 +8,9 @@
 #include <boost/asio.hpp>
 #include <log/log.hpp>
 namespace ztstl::test {
-class TestSession : log_as(session) {
+class TestSession {
+    log_as(session);
+
    private:
     friend void bind(std::shared_ptr<TestSession> const&, std::shared_ptr<TestSession> const&) noexcept;
 

@@ -17,6 +17,8 @@
 namespace ztstl::service {
 
 class ServiceApplication : public Application<ServiceApplication> {
+    log_as(service);
+
    private:
     friend class Application<ServiceApplication>;
 

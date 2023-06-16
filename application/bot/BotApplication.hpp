@@ -20,6 +20,8 @@ using Bot = TgBot::Bot;
 using BotMessage = TgBot::Message;
 
 class BotApplication : public Application<BotApplication> {
+    log_as(bot);
+
    private:
     friend class websocket::client::Session;
     friend class Application<BotApplication>;
